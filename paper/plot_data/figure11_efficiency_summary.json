@@ -1,0 +1,914 @@
+{
+  "status": "ALL27_INDEPENDENTLY_REVIEWED_REAL_API_TIMING_SUMMARY",
+  "datasets": {
+    "visa": {
+      "categories": 12,
+      "samples": 360,
+      "latency_ms": {
+        "mean": 435.40608638888887,
+        "median": 468.1893,
+        "p95": 506.206385,
+        "minimum": 330.1236,
+        "maximum": 704.0422
+      },
+      "inverse_mean_latency_FPS": 2.296706525840423,
+      "stage_mean_ms": {
+        "preprocess": 78.7912038888889,
+        "host_to_device": 2.0835419444444443,
+        "cnn_feature_response": 11.266925833333334,
+        "dino_feature": 10.511095,
+        "matching_raw": 204.15749444444444,
+        "tail": 128.44148833333333,
+        "control_and_sync": 0.15433694444444443
+      },
+      "stage_fraction": {
+        "preprocess": 0.18096027215043442,
+        "host_to_device": 0.004785284380667799,
+        "cnn_feature_response": 0.02587682208757671,
+        "dino_feature": 0.024140900480228638,
+        "matching_raw": 0.46888984978978543,
+        "tail": 0.2949924044438232,
+        "control_and_sync": 0.00035446666748382635
+      },
+      "peak_allocated_GiB": 6.354406833648682,
+      "peak_reserved_GiB": 10.880859375,
+      "loading_validation_calibration_ms": {
+        "mean": 25417.22395,
+        "median": 26029.209499999997,
+        "p95": 33083.58751,
+        "minimum": 16367.0961,
+        "maximum": 34454.3194
+      },
+      "init_peak_allocated_GiB": 3.906907558441162,
+      "init_peak_reserved_GiB": 6.1015625,
+      "distinct_environment_records": [
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4447477760,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7375 MiB, 36 %, 63, 1710 MHz, 121.94 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 2866786304,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 4991 MiB, 7 %, 59, 1710 MHz, 118.80 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3793932288,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 4372 MiB, 6 %, 61, 1710 MHz, 119.49 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3751018496,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 4393 MiB, 18 %, 61, 1710 MHz, 119.67 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4114223104,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 4371 MiB, 10 %, 61, 1710 MHz, 119.93 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4198383616,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7365 MiB, 6 %, 61, 1710 MHz, 120.18 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4301266944,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7374 MiB, 5 %, 59, 1710 MHz, 118.63 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4364828672,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7395 MiB, 5 %, 60, 1710 MHz, 118.72 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4489203712,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7389 MiB, 7 %, 60, 1710 MHz, 120.37 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4614402048,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7410 MiB, 4 %, 60, 1710 MHz, 119.54 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4651253760,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 7386 MiB, 6 %, 59, 1710 MHz, 119.24 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3163340800,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 4354 MiB, 14 %, 60, 1710 MHz, 120.64 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        }
+      ]
+    },
+    "mvtec": {
+      "categories": 15,
+      "samples": 450,
+      "latency_ms": {
+        "mean": 288.17560711111105,
+        "median": 280.00165000000004,
+        "p95": 355.3512999999999,
+        "minimum": 225.3994,
+        "maximum": 971.5382
+      },
+      "inverse_mean_latency_FPS": 3.470106335594299,
+      "stage_mean_ms": {
+        "preprocess": 100.36734133333333,
+        "host_to_device": 2.0935273333333333,
+        "cnn_feature_response": 10.924140666666666,
+        "dino_feature": 10.494614444444444,
+        "matching_raw": 72.89944688888889,
+        "tail": 91.2419028888889,
+        "control_and_sync": 0.15463355555555555
+      },
+      "stage_fraction": {
+        "preprocess": 0.3482853470475555,
+        "host_to_device": 0.0072647624631398365,
+        "cnn_feature_response": 0.03790792973832332,
+        "dino_feature": 0.0364174280732861,
+        "matching_raw": 0.2529688325104534,
+        "tail": 0.31661910528641307,
+        "control_and_sync": 0.0005365948808288062
+      },
+      "peak_allocated_GiB": 1.231372356414795,
+      "peak_reserved_GiB": 1.6875,
+      "loading_validation_calibration_ms": {
+        "mean": 11493.353686666664,
+        "median": 11605.8527,
+        "p95": 13522.987759999996,
+        "minimum": 7247.0729,
+        "maximum": 15146.7177
+      },
+      "init_peak_allocated_GiB": 1.6360697746276855,
+      "init_peak_reserved_GiB": 1.677734375,
+      "distinct_environment_records": [
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3438067712,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2153 MiB, 4 %, 61, 1710 MHz, 120.07 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4408127488,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2216 MiB, 3 %, 61, 1710 MHz, 118.81 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4303589376,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2194 MiB, 3 %, 61, 1710 MHz, 119.88 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4252291072,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2427 MiB, 4 %, 62, 1710 MHz, 119.84 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3441197056,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2370 MiB, 4 %, 62, 1710 MHz, 120.75 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3447750656,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2858 MiB, 4 %, 61, 1710 MHz, 119.27 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3689672704,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2300 MiB, 3 %, 61, 1710 MHz, 119.53 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3939336192,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2198 MiB, 3 %, 61, 1710 MHz, 119.71 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4076912640,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2378 MiB, 3 %, 61, 1710 MHz, 119.76 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4140220416,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2593 MiB, 4 %, 62, 1710 MHz, 120.45 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3393798144,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2238 MiB, 3 %, 61, 1710 MHz, 119.77 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4148072448,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 1582 MiB, 3 %, 61, 1710 MHz, 120.10 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 4199149568,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2172 MiB, 5 %, 61, 1710 MHz, 119.31 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3358789632,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2303 MiB, 4 %, 62, 1710 MHz, 120.03 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        },
+        {
+          "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+          "torch": "2.6.0+cu118",
+          "torch_cuda_runtime": "11.8",
+          "numpy": "1.26.4",
+          "platform": "Windows-10-10.0.19045-SP0",
+          "cpu": "Intel64 Family 6 Model 85 Stepping 7, GenuineIntel",
+          "physical_memory_bytes": 16841474048,
+          "available_memory_bytes": 3517321216,
+          "gpu_name": "NVIDIA GeForce RTX 3090",
+          "gpu_total_memory_bytes": 25769148416,
+          "gpu_compute_capability": [
+            8,
+            6
+          ],
+          "gpu_multiprocessors": 82,
+          "nvidia_smi_command": [
+            "nvidia-smi",
+            "--query-gpu=name,driver_version,memory.total,memory.used,utilization.gpu,temperature.gpu,clocks.sm,power.draw",
+            "--format=csv,noheader"
+          ],
+          "nvidia_smi": "NVIDIA GeForce RTX 3090, 560.94, 24576 MiB, 2273 MiB, 4 %, 63, 1710 MHz, 120.69 W",
+          "CUDA_VISIBLE_DEVICES": null,
+          "cpu_thread_env": {
+            "OMP_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1"
+          }
+        }
+      ]
+    }
+  },
+  "batch_size": 1,
+  "warmup_per_class": 10,
+  "measured_per_class": 30,
+  "normal_gate_per_class": 2,
+  "formal_forward_counts": {
+    "normal": 54,
+    "warmup": 270,
+    "measured": 810,
+    "CNN": 1134,
+    "DINO": 1134,
+    "new_reference": 0
+  },
+  "measured_path_selection": "Frozen first30 test paths per category, first10 overlap warmup; no label-based selection; not a random full-test mixture",
+  "total_scope": "Current synchronized evidence/debug API including validation/image I/O/CPU copies and score configuration reads; barriers retained",
+  "summary_units": "Latency milliseconds, memory GiB, equal-class means because every class has30 measurements; median/p95 pooled across all measured inputs per dataset",
+  "initialization_scope": "Runtime construction, resource loading/full validation and calibration preload; process imports/startup and initial CUDA context creation excluded",
+  "memory_scope": "PyTorch allocated/reserved peaks per measured input after warmup, resident tensors included; not OS total VRAM",
+  "FPS_scope": "Reciprocal of mean synchronized batch1 call latency, not independently measured pipelined throughput",
+  "stage_keys": {
+    "preprocess": "输入校验与预处理",
+    "host_to_device": "主机至设备传输",
+    "cnn_feature_response": "CNN特征与响应",
+    "dino_feature": "DINO特征",
+    "matching_raw": "正常记忆匹配",
+    "tail": "评分与配置读取",
+    "control_and_sync": "控制与同步"
+  },
+  "configuration": {
+    "path": "configs/efficiency_v1.json",
+    "bytes": 376873,
+    "sha256": "a5f3359f21111b28fbcd0c7d3b5dc4bbed871922d306264e39405279c280d158"
+  },
+  "independent_review": {
+    "path": "outputs/efficiency_v1/independent_resource_and_timing_review.json",
+    "bytes": 13134,
+    "sha256": "9f45d8879266f0ef1443860668e2b207b2420442f1b98af2cc90dd0439ee1400"
+  },
+  "no_new_accuracy_or_GT": true,
+  "no_optimized_bare_network_speed_claim": true,
+  "no_dedicated_machine_isolation_claim": true
+}

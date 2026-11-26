@@ -34,4 +34,6 @@ Follow the [reproduction guide](docs/reproduction.md) for data paths and complet
 
 Generated checkpoints, predictions, metrics, and figures are saved to `outputs/`.
 
+The [manuscript figures and plotting data](paper/README.md) include the experiments behind Figures 7 and 8 and commands to regenerate all empirical panels.
+
 See [training details](docs/training.md) for category-specific settings and [third-party notices](THIRD_PARTY_NOTICES.md) for attribution.

@@ -1,0 +1,375 @@
+{
+  "selection": "First path-sorted normal and anomalous image in each of the first five categories; unchanged manuscript selection",
+  "datasets": {
+    "mvtec": [
+      "bottle",
+      "cable",
+      "capsule",
+      "carpet",
+      "grid"
+    ],
+    "visa": [
+      "candle",
+      "capsules",
+      "cashew",
+      "chewinggum",
+      "fryum"
+    ]
+  },
+  "image_resize": "PIL BICUBIC, 512x512; figures only",
+  "mask_resize": "NEAREST, 512x512; displayed GT only",
+  "display_range": [
+    0,
+    10
+  ],
+  "selection_source": {
+    "project_relative_path": "outputs/final_ablation_v1/figures/qualitative_selection.json",
+    "sha256": "b702521ce02b034f5177301c9e9bd9ca915435d4a71eb30e7e368af263382783"
+  },
+  "records": [
+    {
+      "dataset": "mvtec",
+      "category": "bottle",
+      "condition": "normal",
+      "input": "bottle/test/good/000.png",
+      "input_sha256": "9e7bfe658efe9b6db2607a96405b4ac6880936eaf93b89c85bcd311122ceb57b",
+      "response_file": "mvtec_bottle_normal.npz",
+      "response_sha256": "a5a054eecda227d4221397bc10f1ff505ed216f5f53c9b14a15ce5a2833b2873",
+      "array_sha256": {
+        "pixel_score": "c7fe744c28540c8217073042e1abda5ee2b67edb34a0a4e89bd715ec1f6ec9ce"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/bottle/0063_tail.npz",
+        "sha256": "c0fa9695ce8e2f9cfd5526d8eaa385c8921050d49aa422446bfbb204d348f3af"
+      }
+    },
+    {
+      "dataset": "mvtec",
+      "category": "bottle",
+      "condition": "anomaly",
+      "input": "bottle/test/broken_large/000.png",
+      "input_sha256": "11a691a06a33dd78c5fcab6a822caa48c0d72f27f660e19f5abd9b5aa392b0eb",
+      "response_file": "mvtec_bottle_anomaly.npz",
+      "response_sha256": "669e1380096f66f9745dfa2584543c7e6df68069ac6d2002390cdc5652b8271c",
+      "array_sha256": {
+        "pixel_score": "7e36df4f3ca0b17560d4a51c140243ff7ce564331be882611cbfbe515c99995b"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/bottle/0000_tail.npz",
+        "sha256": "f37ab999baea0a337f61e9269e80dbbfc81657bd099c40b1a52701d5bf981d77"
+      },
+      "mask": "bottle/ground_truth/broken_large/000_mask.png",
+      "mask_sha256": "e0c99ed15df25c67ad48505a3c50682172d49115650b8d0bdafa687e3c48c7c5"
+    },
+    {
+      "dataset": "mvtec",
+      "category": "cable",
+      "condition": "normal",
+      "input": "cable/test/good/000.png",
+      "input_sha256": "89132397ea130312c961d447deb33216f14ec133c4ef62793b4ba817696e48cb",
+      "response_file": "mvtec_cable_normal.npz",
+      "response_sha256": "36520411ae5d2e22cbbcd216664794a4c8c69219b8d0c06470f6aac504751a64",
+      "array_sha256": {
+        "pixel_score": "43b370d0b43a4e1c6511f924e96af67e1fec4e1955399794c958910c0cfdeb97",
+        "e_cnn": "86a848fbe4e2bcc9f33afc1f1477778d35bb460194e1834aef609edd376729ae",
+        "e_global_patch": "c47162c664318a413fc5536b26e636896ec9e49fec1109ab1a96e68557a2b47c"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/cable/0060_tail.npz",
+        "sha256": "f416fe1963191adfb14af5a5580423a3a9ec621448b92fc467c106e4c4da0f2d"
+      }
+    },
+    {
+      "dataset": "mvtec",
+      "category": "cable",
+      "condition": "anomaly",
+      "input": "cable/test/bent_wire/000.png",
+      "input_sha256": "4aa2490bd1227dce17dcccba7dcd21c1297a9a858d295f114cb72c2c0f98aa06",
+      "response_file": "mvtec_cable_anomaly.npz",
+      "response_sha256": "5ac29349531942d923e74cd88d0327dd9bc531240b1e43a73f681faa7aace9c3",
+      "array_sha256": {
+        "pixel_score": "56a9ec0c95fe9d0dd9ebfe5a08ef42130aee1b0ca1343b7c26d6b1d175658154",
+        "e_cnn": "c4362ae9a66a8dc0e7b157b5c37e715785217d6149c890b6b4811e98c943fb4c",
+        "e_global_patch": "25ec88d4d3fdb7e8642e7ba2da32ed864de7e00781de39d193a140952b6fe7ab"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/cable/0000_tail.npz",
+        "sha256": "67455496c0a7beb69e1bd4682037bb9edfdd490369df75475efd3df7fdc1bcc9"
+      },
+      "mask": "cable/ground_truth/bent_wire/000_mask.png",
+      "mask_sha256": "9812577ff9395069eff26f24e086cd13c9e44ae2b0eb42559abb358b4c1b001c"
+    },
+    {
+      "dataset": "mvtec",
+      "category": "capsule",
+      "condition": "normal",
+      "input": "capsule/test/good/000.png",
+      "input_sha256": "86366d544a0182b04fdeacb62c9b23af8c72af24d35eaafeb8c210f603174728",
+      "response_file": "mvtec_capsule_normal.npz",
+      "response_sha256": "286e5a1bea88089821d155410fdb727d8944cf41c2a2d9a768b6d7825fc81965",
+      "array_sha256": {
+        "pixel_score": "8c45362e3d63aead8310121016511c44886b5c5f255242ac550861c41ac21ee4"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/capsule/0045_tail.npz",
+        "sha256": "75e1e5e407354dea7950c6b667d0040d2369929b619cae8fbcc78fa7703058bb"
+      }
+    },
+    {
+      "dataset": "mvtec",
+      "category": "capsule",
+      "condition": "anomaly",
+      "input": "capsule/test/crack/000.png",
+      "input_sha256": "6462a533da731a19e4df05fc1815719b94603aee341a2ac620add75ec2334ef4",
+      "response_file": "mvtec_capsule_anomaly.npz",
+      "response_sha256": "28098f40ac9a507ca680e1ebfeb1baceb302c5bcfc9c4afa2ca00b409c027330",
+      "array_sha256": {
+        "pixel_score": "09b2a452cb220c73706743dc69cd68fc8e089bd1972f0dbc84602c23b0713eef"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/capsule/0000_tail.npz",
+        "sha256": "0b9319ec7fbd6dcdc4db7f3650f9a45b1b6edd9ab9936d89714a3f680aeb7347"
+      },
+      "mask": "capsule/ground_truth/crack/000_mask.png",
+      "mask_sha256": "650a3bca9dda64b435441238a0d0fd6e4db4ec3cd74f25a5c152e6a2333beb2d"
+    },
+    {
+      "dataset": "mvtec",
+      "category": "carpet",
+      "condition": "normal",
+      "input": "carpet/test/good/000.png",
+      "input_sha256": "22c6a63be1eec01601689abb9e794b69ee0aefc1addd9233c63b7e02c70dc0b5",
+      "response_file": "mvtec_carpet_normal.npz",
+      "response_sha256": "9a16fbec7dd8f4c9e0a0d17eaae16bd731bdd2b34462e4d669afa3802cfdba1e",
+      "array_sha256": {
+        "pixel_score": "dbef797cc09b61b59ea2a1490b2ad74af6ba8ec0359ade47b15cb7e058c838cd"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/carpet/0036_tail.npz",
+        "sha256": "c7c9639e32796488c5ee24b008186332fc7a3fe3d7a97ff2ae5112ad130171d5"
+      }
+    },
+    {
+      "dataset": "mvtec",
+      "category": "carpet",
+      "condition": "anomaly",
+      "input": "carpet/test/color/000.png",
+      "input_sha256": "12dff41957a900a38a9def83edbea55006c9190109678fc29b0d96b546ecae28",
+      "response_file": "mvtec_carpet_anomaly.npz",
+      "response_sha256": "cb54aa130a96ebccd689e4cf45644ec60318520aa34615f99293e01127d9dacf",
+      "array_sha256": {
+        "pixel_score": "60da1272cbe6d071cb8d43ca05b53c9ac841a3cee3e73474338ecdb5efeecfdc"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/carpet/0000_tail.npz",
+        "sha256": "609ae63be2405feccf449cdcf544966bdb2ea01f0bec28683350467a6751c3ff"
+      },
+      "mask": "carpet/ground_truth/color/000_mask.png",
+      "mask_sha256": "dddfe66b56bd36a64f996b0e29173cb22bc8d73f4c50249a32da84c9e9e8e06c"
+    },
+    {
+      "dataset": "mvtec",
+      "category": "grid",
+      "condition": "normal",
+      "input": "grid/test/good/000.png",
+      "input_sha256": "4b5d0ff80b6b5a8444d795c4823b46d32df1900e83e107205ed7b1b3538b62ce",
+      "response_file": "mvtec_grid_normal.npz",
+      "response_sha256": "8e98e79bdadf41a8a54da228113dd181867e9d301d4ae5f8e3660364229f2165",
+      "array_sha256": {
+        "pixel_score": "eec44afb3a881049caf3973bb996f6fc4d0854602b323174d064282b92d8df72"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/grid/0035_tail.npz",
+        "sha256": "a9c51f0d1bb76a01fc797b06aa52a2601a5855929e634b0f105bde4ac2b3dc85"
+      }
+    },
+    {
+      "dataset": "mvtec",
+      "category": "grid",
+      "condition": "anomaly",
+      "input": "grid/test/bent/000.png",
+      "input_sha256": "20a158b8868f08156ea79cabd42b1ff174b2d69adbe08b2f46737a851847e8bc",
+      "response_file": "mvtec_grid_anomaly.npz",
+      "response_sha256": "da2da6d2e52d702353f6699a9ac08dc84fb730c6e85c43cdc203703dcd6b2fec",
+      "array_sha256": {
+        "pixel_score": "8d75e049776b8573756307d56019239d14c8b7e003496cecc35d982f6ac1ad4e"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_mvtec_20261020_175709_295330/grid/0000_tail.npz",
+        "sha256": "7403286ffca44b0f46e357821d50f3b5f262a3ded9faaec371cf01274f8d66ab"
+      },
+      "mask": "grid/ground_truth/bent/000_mask.png",
+      "mask_sha256": "9fed5beddf20ccb0bfa75a93e7744435dc52c1cd3ffe5fb9cdcdabe9aea560b1"
+    },
+    {
+      "dataset": "visa",
+      "category": "candle",
+      "condition": "normal",
+      "input": "candle/test/good/0011.jpg",
+      "input_sha256": "26da76bd9dbc5212bb4ae59a394aeb51a624ee42a67a318671fe02cdcb52443f",
+      "response_file": "visa_candle_normal.npz",
+      "response_sha256": "7dabac0256d17c9ba5b612845fb57c00bb29a5d693375f5d1a854b23214e1ed5",
+      "array_sha256": {
+        "pixel_score": "c0797cbdb141ac2c49af73ee69096b8c4d4c522e0c7061110dc6a94f7b9aee8e"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/candle/0100_tail.npz",
+        "sha256": "57889d38f335929ab7001671d44dc480770faadf70ff3cca0e354697fdf633f2"
+      }
+    },
+    {
+      "dataset": "visa",
+      "category": "candle",
+      "condition": "anomaly",
+      "input": "candle/test/bad/000.jpg",
+      "input_sha256": "c004dbc05698f01cf415e07d2a8cf8fef48aa19516eece6600e13f92f1f788b7",
+      "response_file": "visa_candle_anomaly.npz",
+      "response_sha256": "63c184d23035679acd4c34cc4c291bd93e7e9da12be3ff9d8aff10580151db41",
+      "array_sha256": {
+        "pixel_score": "121024e75894433cbaab4181d060134f10ba4895fe43e7bca4116e10f93d54c8"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/candle/0000_tail.npz",
+        "sha256": "716024d02abc92f30de21d39dcc9fbf66a09ddcf207afd97d2824c7869abe960"
+      },
+      "mask": "candle/ground_truth/bad/000_mask.png",
+      "mask_sha256": "58cf9d8d07688e4fdeee0099b81aaff6731f65897d1d1f243762dbcd69f5810a"
+    },
+    {
+      "dataset": "visa",
+      "category": "capsules",
+      "condition": "normal",
+      "input": "capsules/test/good/011.jpg",
+      "input_sha256": "f5bbabfeef8e263ea8bbb99fef0c3cd9837558022b493f8b7eb4bd28c455123f",
+      "response_file": "visa_capsules_normal.npz",
+      "response_sha256": "a4ad2f0f547e17cf5780adbdfe10fb71c36f72336417ec7738f1fdbc57a3a7ab",
+      "array_sha256": {
+        "pixel_score": "1143550ac5892937f1f57ea851c91e9f85e1e7a89543cb4a6b3a7aadf345d762"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/capsules/0100_tail.npz",
+        "sha256": "b02b1cd1a752057f0fc43d3024c3e2f9c0ceb7eb06bb74b8263feae80b1ba09d"
+      }
+    },
+    {
+      "dataset": "visa",
+      "category": "capsules",
+      "condition": "anomaly",
+      "input": "capsules/test/bad/000.jpg",
+      "input_sha256": "c7e81efefcdb31b22bf6087ad74575446013eb2f3925c0e3265d467a2caaad7c",
+      "response_file": "visa_capsules_anomaly.npz",
+      "response_sha256": "69b10dd7353c124905e60581e9851fbe5e28715c08a412afcbe451ecc8b7851a",
+      "array_sha256": {
+        "pixel_score": "5904dc0e35d36c25970cbd92283d20a29e289635ee114a26e8d02a14268c8959"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/capsules/0000_tail.npz",
+        "sha256": "002ee6a7f7b91d81e2c5d94d763b611f4f013b85de3e3b31bb7fd641082dfd64"
+      },
+      "mask": "capsules/ground_truth/bad/000_mask.png",
+      "mask_sha256": "32ffe77696d1249c4e8a1432b5e0870cd8688776ff5929cfa82bff4db3a41d0b"
+    },
+    {
+      "dataset": "visa",
+      "category": "cashew",
+      "condition": "normal",
+      "input": "cashew/test/good/006.jpg",
+      "input_sha256": "4a0c0a6607571d54302bbab3605ecf764e66eb282618580a598ed9485f9c426c",
+      "response_file": "visa_cashew_normal.npz",
+      "response_sha256": "4538bb8dbd1b253f0b2b4e0928589de52c9e36c2fa1eca948d2f800d84a032b8",
+      "array_sha256": {
+        "pixel_score": "8379770169eac3ee4c3bfccb024852433700cc9d4c73a313693f8185a18273fd"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/cashew/0100_tail.npz",
+        "sha256": "42a3bde4e0dcb1b816276d0851207853636dea7914091630f65496d057c980ed"
+      }
+    },
+    {
+      "dataset": "visa",
+      "category": "cashew",
+      "condition": "anomaly",
+      "input": "cashew/test/bad/000.jpg",
+      "input_sha256": "f28c4dad19810bc27bd38389a430dcc77c4aace06a5350e74c66c9ccb38affbd",
+      "response_file": "visa_cashew_anomaly.npz",
+      "response_sha256": "0a808cd3fb78dad13c7556728a6428e7fed8a28aff20d97fcc2ee5f8886ec90e",
+      "array_sha256": {
+        "pixel_score": "cdd4b6f7dc9ffede3cf267ad5a87acd3f4cb3453d04c56d005d1d7698a01e0c4"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/cashew/0000_tail.npz",
+        "sha256": "b23f72c7c120edcb1fdfcd043c0d5f36dc820577c8a6e7628be4d1a4692f1a1a"
+      },
+      "mask": "cashew/ground_truth/bad/000_mask.png",
+      "mask_sha256": "009d05a0dac67979906d1dd1aab424c13cd89f272eb2a07a6790699e0f4fb7d0"
+    },
+    {
+      "dataset": "visa",
+      "category": "chewinggum",
+      "condition": "normal",
+      "input": "chewinggum/test/good/006.jpg",
+      "input_sha256": "0744bba52b948a7f30051e1633bb2b1e1e88e11c56c8c24acd5fac347a165172",
+      "response_file": "visa_chewinggum_normal.npz",
+      "response_sha256": "cf8a3bd32a9087bde175dce5eb3a9bf79cd430675d9d243c572c2758fc723f82",
+      "array_sha256": {
+        "pixel_score": "af608ed87157372eff5fabe477b5c97a42e0bda8e7d70f8cdec2ebefacd4ec2e"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/chewinggum/0100_tail.npz",
+        "sha256": "96752f17e5fee9739ec13a72ae5304011a17791adc9505b519a0994dfb170aba"
+      }
+    },
+    {
+      "dataset": "visa",
+      "category": "chewinggum",
+      "condition": "anomaly",
+      "input": "chewinggum/test/bad/000.jpg",
+      "input_sha256": "cf54dc3b8aee8cc4c60b83553a5934d847e9f8fcf94406c359fe2fea17810dd9",
+      "response_file": "visa_chewinggum_anomaly.npz",
+      "response_sha256": "1faa2c5001472f01788a67ffc1f3f257a18b62e1e0b3c4d99bde5b30a7ecc0c1",
+      "array_sha256": {
+        "pixel_score": "3254d62997fa8554d0289b815ef1c42e592d90a7044c796de41e3a1549535d41"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/chewinggum/0000_tail.npz",
+        "sha256": "bfa9dad0d4f85d0464923db0b9916e774b30c2348103324794b16ad4ad374fbc"
+      },
+      "mask": "chewinggum/ground_truth/bad/000_mask.png",
+      "mask_sha256": "83610a0a74f77fd051399ca3096616306ede7307bf6ae9a120d1b6e30c13eb92"
+    },
+    {
+      "dataset": "visa",
+      "category": "fryum",
+      "condition": "normal",
+      "input": "fryum/test/good/006.jpg",
+      "input_sha256": "14645fde04e076f2362aaba6688710c8b29cffe94be14439e880f9cf039f0f83",
+      "response_file": "visa_fryum_normal.npz",
+      "response_sha256": "58e7a1efa3ea8ebaa67f8c64b13b112e62b6f0b8f0e469fc9950cad73b544763",
+      "array_sha256": {
+        "pixel_score": "a6721b897ae6412e1439eb430a77b33338d0dbc88724dcb5063c11ae953aadc0"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/fryum/0100_tail.npz",
+        "sha256": "7d3c70fdf72b47974661eee1c8696de50aeaad7c5219f295b342e7a89890326a"
+      }
+    },
+    {
+      "dataset": "visa",
+      "category": "fryum",
+      "condition": "anomaly",
+      "input": "fryum/test/bad/000.jpg",
+      "input_sha256": "44139ec9efb05d7106c45000d65f9310edf3bb47a9931b6a080b91ddd64222d5",
+      "response_file": "visa_fryum_anomaly.npz",
+      "response_sha256": "82c685ccd0b3f0149458bfd2e4e9af7fa861b6e7c2e91e830338c2e403eeb9a2",
+      "array_sha256": {
+        "pixel_score": "d3c79e98e1d5fa0c070042247336dd0bc92b6fc5c5df1fba084f117d5f08b28c"
+      },
+      "source_tail": {
+        "project_relative_path": "outputs/evaluations/eval_visa_20261020_170306_068152/fryum/0000_tail.npz",
+        "sha256": "fbe4dd72b2034aeb4f7c83786c3d16e7ad584d0dacfe209e76f59b8fed320b95"
+      },
+      "mask": "fryum/ground_truth/bad/000_mask.png",
+      "mask_sha256": "5aa37b216dfc2906a65707c6430c5bba7c16919b011107a3d1862f3753f9184b"
+    }
+  ]
+}

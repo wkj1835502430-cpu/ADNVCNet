@@ -1,0 +1,86 @@
+{
+  "schema": "adnvcnet_paper_plot_data_v1",
+  "origin": "Original saved experiment outputs used in the v72 manuscript; not synthetic or placeholder measurements",
+  "numeric_sources": [
+    {
+      "file": "figure05_ablation.csv",
+      "source": {
+        "project_relative_path": "outputs/experiment_figures/export_20261106_093944_245816/data/fig05_ablation_exact_values.csv",
+        "sha256": "090a83ba8ff4c5200bf6f02bd099acc32dd98fabba5799f89251a4249e3188e5"
+      },
+      "sha256": "090a83ba8ff4c5200bf6f02bd099acc32dd98fabba5799f89251a4249e3188e5"
+    },
+    {
+      "file": "figure06_fusion_order.csv",
+      "source": {
+        "project_relative_path": "outputs/experiment_figures/export_20261106_093944_245816/data/fig06_fusion_order_exact_values.csv",
+        "sha256": "867f81a2f0d5716e325e71285761de97ffc6a09706d98988ab1996cde753c445"
+      },
+      "sha256": "867f81a2f0d5716e325e71285761de97ffc6a09706d98988ab1996cde753c445"
+    },
+    {
+      "file": "figure08_intervals.csv",
+      "source": {
+        "project_relative_path": "outputs/experiment_figures/export_20261106_093944_245816/data/fig07_saved_intervals.csv",
+        "sha256": "632a478e0697ff46dfda0300e6f37b44e2873334fab8f89f572c835b384531b7"
+      },
+      "sha256": "632a478e0697ff46dfda0300e6f37b44e2873334fab8f89f572c835b384531b7"
+    },
+    {
+      "file": "figure07_spatial_macro.csv",
+      "source": {
+        "project_relative_path": "outputs/method_controls/spatial_center_control_v1_20261117T091603372929/macro.csv",
+        "sha256": "254e098aee310989066ec8e70edfaabae2dfcde4d5accdb746bfa1c2a0087b1e"
+      },
+      "sha256": "254e098aee310989066ec8e70edfaabae2dfcde4d5accdb746bfa1c2a0087b1e"
+    },
+    {
+      "file": "figure03_calibration.npz",
+      "source": {
+        "project_relative_path": "cache/adnvc/mvtec/cable/tail_calibration.npz",
+        "sha256": "bb149f1bcc085301b8df0c0a02594e609e2c57c45c513605a1954c4c7685bc67"
+      },
+      "arrays": {
+        "knots": {
+          "shape": [
+            137766
+          ],
+          "dtype": "float64",
+          "sha256": "65473a9e93b6bc25e32daae7e84cf819a7759f2550453b0991c04fb11cc385e3"
+        },
+        "evidence": {
+          "shape": [
+            137766
+          ],
+          "dtype": "float64",
+          "sha256": "23fe013a43375e023a31d17e5b3aa75bc1aba850a9c615cbdf3ac9d75eff77f8"
+        },
+        "count": {
+          "shape": [],
+          "dtype": "int64",
+          "sha256": "53c4aa0fec4bbb322e9df173aff0627259ca8e779e34152f80e75a70e081604b"
+        },
+        "q50": {
+          "shape": [],
+          "dtype": "float64",
+          "sha256": "0f6acc1f915280cecd0c4d47ea8f244367832342ab19ada36e2f76f53abd4249"
+        },
+        "q95": {
+          "shape": [],
+          "dtype": "float64",
+          "sha256": "28a7e05449d10c3d3a11a1be64afc838866543049392f0ad08da183c10c860d0"
+        },
+        "scale": {
+          "shape": [],
+          "dtype": "float64",
+          "sha256": "04e2bfa5be575cf3b9e82d8132ffe39927ac7a9d51c289cf5b667f94998f0737"
+        }
+      }
+    }
+  ],
+  "qualitative_cases": 20,
+  "new_training": 0,
+  "new_inference": 0,
+  "response_arrays_preserved_exactly": true,
+  "raw_dataset_images_not_bundled": true
+}

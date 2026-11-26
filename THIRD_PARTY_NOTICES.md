@@ -24,10 +24,13 @@ license texts are retained in `third_party_licenses/` for attribution and
 reference. Inclusion of a license text does not imply inclusion of that
 project's code or model assets.
 
-MVTec AD and VisA must be obtained under their own dataset terms. This package
-does not distribute dataset images, annotation masks, trained checkpoints, or
-experimental result files. Normal-image identities and split indices are used
-to apply the documented dataset protocol; they are not image data.
+MVTec AD and VisA must be obtained under their own dataset terms. The selected
+examples visible in `paper/figures/` are attributed to these datasets and retain
+the relevant dataset terms. The package supplies the manuscript figures,
+computed response arrays, image-score rows, and small numerical plot inputs.
+Complete dataset images, annotation masks, and model weights are obtained
+separately. Normal-image identities and split indices apply the documented
+dataset protocol; they are not image data.
 
 These notices describe third-party materials. The license of the original
 ADNVCNet project code is specified separately by its authors.

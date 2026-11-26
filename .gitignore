@@ -11,3 +11,4 @@ third_party/
 *.pt
 *.npz
 *.npy
+!paper/plot_data/*.npz

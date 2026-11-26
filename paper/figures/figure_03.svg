@@ -1,0 +1,2349 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 figure_03.svg Figure3 --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="840.96000000pt" height="531.45549964pt" viewBox="11.10857143 7.61279655 840.96000000 531.45549964" xml:space="preserve" color-interpolation-filters="sRGB" class="st40">
+	<v:documentProperties v:langID="2052" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvConvertTheme"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	
+		.st1 {fill:#000000;font-family:Arial;font-size:1.5em;font-weight:bold}
+		.st2 {font-family:微软雅黑;font-size:1em}
+		.st3 {fill:#000000;font-family:微软雅黑;font-size:1.24999em}
+		.st4 {font-family:Arial;font-size:1em}
+		.st5 {fill:#f8f9fa;stroke:#c9d5dc;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.45}
+		.st6 {fill:#fbf5eb;stroke:#b77a39;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5}
+		.st7 {fill:#000000;font-family:微软雅黑;font-size:1.16666em}
+		.st8 {marker-end:url(#mrkr4-115);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st9 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st10 {stroke:#c9d5dc;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st11 {fill:#000000;font-family:Arial;font-size:1.33333em}
+		.st12 {fill:#cfe4df;stroke:#77a49d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.45}
+		.st13 {fill:#24313a;font-family:微软雅黑;font-size:1.14999em}
+		.st14 {font-family:Cambria Math;font-size:1em}
+		.st15 {fill:#ffffff;stroke:#77a49d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.45}
+		.st16 {fill:#fbf5eb;stroke:#b77a39;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st17 {fill:#000000;font-family:微软雅黑;font-size:1.04166em}
+		.st18 {fill:#cfe4df;stroke:#287f78;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.7}
+		.st19 {fill:#000000;font-family:Arial;font-size:1.125em}
+		.st20 {fill:#f5f8fa;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.85}
+		.st21 {fill:#fbf5eb;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.85}
+		.st22 {stroke:#697780;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.85}
+		.st23 {stroke:#697780;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.7}
+		.st24 {fill:#000000;font-family:Arial;font-size:1.04166em}
+		.st25 {fill:#000000;font-family:微软雅黑;font-size:1.10001em}
+		.st26 {fill:#000000;font-family:Arial;font-size:0.792em}
+		.st27 {fill:#000000;font-family:Arial;font-size:1.10001em}
+		.st28 {fill:#24313a;font-family:微软雅黑;font-size:1.18334em}
+		.st29 {stroke:#376a8a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.55}
+		.st30 {stroke:#b77a39;stroke-dasharray:10.15,7.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.45}
+		.st31 {stroke:#b5bcc0;stroke-dasharray:4.55,3.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.65}
+		.st32 {stroke:#a2adb4;stroke-dasharray:4.55,3.25;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.65}
+		.st33 {fill:#376a8a;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.85}
+		.st34 {fill:#000000;font-family:微软雅黑;font-size:1.08334em}
+		.st35 {fill:#fbf5eb;stroke:#b77a39;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.85}
+		.st36 {fill:#000000;font-family:微软雅黑;font-size:1.20834em}
+		.st37 {font-size:1em}
+		.st38 {marker-end:url(#mrkr4-1152);stroke:#697780;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.95}
+		.st39 {fill:#697780;fill-opacity:1;stroke:#697780;stroke-opacity:1;stroke-width:0.34545454545455}
+		.st40 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-115" class="st9" v:arrowType="4" v:arrowSize="1" v:setback="5.6" refX="-5.6" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.8,-2.8) "/>
+		</marker>
+		<marker id="mrkr4-1152" class="st39" v:arrowType="4" v:arrowSize="1" v:setback="5.78947" refX="-5.7894736842105" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.8947368421053,-2.8947368421053) "/>
+		</marker>
+	</defs>
+	<g v:mID="1" v:index="2" v:groupContext="foregroundPage">
+		<title>图3_正常参照与响应校准</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="24" v:shadowOffsetX="8.50394" v:shadowOffsetY="-8.50394"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(12.96,-540)">
+			<title>Text_1</title>
+			<desc>(a) Normal candidates for the same query</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="417.6" cy="559.8" width="835.2" height="25.2"/>
+			<text x="3.96000" y="566.10000" class="st1" v:langID="2052" style="font-family:Arial;font-size:18.00000px;font-weight:bold" text-anchor="start"><tspan x="3.96000" y="566.10000">(a) Normal candidates for the same query</tspan></text>		</g>
+		<g id="shape2-4" v:mID="2" v:groupContext="shape" transform="translate(14.4,-487.44)">
+			<title>Text_2</title>
+			<desc>Query feature q</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="75.6" cy="559.8" width="151.21" height="25.2"/>
+			<text x="75.60000" y="565.04996" class="st3" v:langID="2052" style="font-family:Arial;font-size:14.99988px;font-weight:normal" text-anchor="middle"><tspan x="75.60000" y="565.04996">Query feature q</tspan></text>		</g>
+		<g id="shape3-8" v:mID="3" v:groupContext="shape" transform="translate(49.68,-465.12)">
+			<title>Module_3</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape4-10" v:mID="4" v:groupContext="shape" transform="translate(61.2,-465.12)">
+			<title>Module_4</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape5-12" v:mID="5" v:groupContext="shape" transform="translate(72.72,-465.12)">
+			<title>Module_5</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape6-14" v:mID="6" v:groupContext="shape" transform="translate(84.24,-465.12)">
+			<title>Module_6</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape7-16" v:mID="7" v:groupContext="shape" transform="translate(95.76,-465.12)">
+			<title>Module_7</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape8-18" v:mID="8" v:groupContext="shape" transform="translate(107.28,-465.12)">
+			<title>Module_8</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape9-20" v:mID="9" v:groupContext="shape" transform="translate(118.8,-465.12)">
+			<title>Module_9</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape10-22" v:mID="10" v:groupContext="shape" transform="translate(49.68,-453.6)">
+			<title>Module_10</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape11-24" v:mID="11" v:groupContext="shape" transform="translate(61.2,-453.6)">
+			<title>Module_11</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape12-26" v:mID="12" v:groupContext="shape" transform="translate(72.72,-453.6)">
+			<title>Module_12</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape13-28" v:mID="13" v:groupContext="shape" transform="translate(84.24,-453.6)">
+			<title>Module_13</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape14-30" v:mID="14" v:groupContext="shape" transform="translate(95.76,-453.6)">
+			<title>Module_14</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape15-32" v:mID="15" v:groupContext="shape" transform="translate(107.28,-453.6)">
+			<title>Module_15</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape16-34" v:mID="16" v:groupContext="shape" transform="translate(118.8,-453.6)">
+			<title>Module_16</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape17-36" v:mID="17" v:groupContext="shape" transform="translate(49.68,-442.08)">
+			<title>Module_17</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape18-38" v:mID="18" v:groupContext="shape" transform="translate(61.2,-442.08)">
+			<title>Module_18</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape19-40" v:mID="19" v:groupContext="shape" transform="translate(72.72,-442.08)">
+			<title>Module_19</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape20-42" v:mID="20" v:groupContext="shape" transform="translate(84.24,-442.08)">
+			<title>Module_20</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape21-44" v:mID="21" v:groupContext="shape" transform="translate(95.76,-442.08)">
+			<title>Module_21</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape22-46" v:mID="22" v:groupContext="shape" transform="translate(107.28,-442.08)">
+			<title>Module_22</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape23-48" v:mID="23" v:groupContext="shape" transform="translate(118.8,-442.08)">
+			<title>Module_23</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape24-50" v:mID="24" v:groupContext="shape" transform="translate(49.68,-430.56)">
+			<title>Module_24</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape25-52" v:mID="25" v:groupContext="shape" transform="translate(61.2,-430.56)">
+			<title>Module_25</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape26-54" v:mID="26" v:groupContext="shape" transform="translate(72.72,-430.56)">
+			<title>Module_26</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape27-56" v:mID="27" v:groupContext="shape" transform="translate(84.24,-430.56)">
+			<title>Module_27</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape28-58" v:mID="28" v:groupContext="shape" transform="translate(95.76,-430.56)">
+			<title>Module_28</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape29-60" v:mID="29" v:groupContext="shape" transform="translate(107.28,-430.56)">
+			<title>Module_29</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape30-62" v:mID="30" v:groupContext="shape" transform="translate(118.8,-430.56)">
+			<title>Module_30</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape31-64" v:mID="31" v:groupContext="shape" transform="translate(49.68,-419.04)">
+			<title>Module_31</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape32-66" v:mID="32" v:groupContext="shape" transform="translate(61.2,-419.04)">
+			<title>Module_32</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape33-68" v:mID="33" v:groupContext="shape" transform="translate(72.72,-419.04)">
+			<title>Module_33</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape34-70" v:mID="34" v:groupContext="shape" transform="translate(84.24,-419.04)">
+			<title>Module_34</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape35-72" v:mID="35" v:groupContext="shape" transform="translate(95.76,-419.04)">
+			<title>Module_35</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape36-74" v:mID="36" v:groupContext="shape" transform="translate(107.28,-419.04)">
+			<title>Module_36</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape37-76" v:mID="37" v:groupContext="shape" transform="translate(118.8,-419.04)">
+			<title>Module_37</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape38-78" v:mID="38" v:groupContext="shape" transform="translate(49.68,-407.52)">
+			<title>Module_38</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape39-80" v:mID="39" v:groupContext="shape" transform="translate(61.2,-407.52)">
+			<title>Module_39</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape40-82" v:mID="40" v:groupContext="shape" transform="translate(72.72,-407.52)">
+			<title>Module_40</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape41-84" v:mID="41" v:groupContext="shape" transform="translate(84.24,-407.52)">
+			<title>Module_41</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape42-86" v:mID="42" v:groupContext="shape" transform="translate(95.76,-407.52)">
+			<title>Module_42</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape43-88" v:mID="43" v:groupContext="shape" transform="translate(107.28,-407.52)">
+			<title>Module_43</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape44-90" v:mID="44" v:groupContext="shape" transform="translate(118.8,-407.52)">
+			<title>Module_44</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape45-92" v:mID="45" v:groupContext="shape" transform="translate(49.68,-396)">
+			<title>Module_45</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape46-94" v:mID="46" v:groupContext="shape" transform="translate(61.2,-396)">
+			<title>Module_46</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape47-96" v:mID="47" v:groupContext="shape" transform="translate(72.72,-396)">
+			<title>Module_47</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape48-98" v:mID="48" v:groupContext="shape" transform="translate(84.24,-396)">
+			<title>Module_48</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape49-100" v:mID="49" v:groupContext="shape" transform="translate(95.76,-396)">
+			<title>Module_49</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape50-102" v:mID="50" v:groupContext="shape" transform="translate(107.28,-396)">
+			<title>Module_50</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape51-104" v:mID="51" v:groupContext="shape" transform="translate(118.8,-396)">
+			<title>Module_51</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st5"/>
+		</g>
+		<g id="shape52-106" v:mID="52" v:groupContext="shape" transform="translate(84.24,-430.56)">
+			<title>Module_52</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st6"/>
+		</g>
+		<g id="shape53-108" v:mID="53" v:groupContext="shape" transform="translate(17.28,-353.52)">
+			<title>Text_53</title>
+			<desc>Fixed query location</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="73.44" cy="558.72" width="146.88" height="27.36"/>
+			<text x="73.44000" y="563.61997" class="st7" v:langID="2052" style="font-family:Arial;font-size:13.99992px;font-weight:normal" text-anchor="middle"><tspan x="73.44000" y="563.61997">Fixed query location</tspan></text>		</g>
+		<g id="shape54-110" v:mID="54" v:groupContext="shape" transform="translate(152.64,-436.319)">
+			<title>Connector_54</title>
+			<path d="M0 572.4 L59.2 572.4" class="st8"/>
+		</g>
+		<g id="shape55-116" v:mID="55" v:groupContext="shape" transform="translate(233.28,-344.16)">
+			<title>Connector_55</title>
+			<path d="M0 396 L0 572.4" class="st10"/>
+		</g>
+		<g id="shape56-119" v:mID="56" v:groupContext="shape" transform="translate(253.44,-489.6)">
+			<title>Text_56</title>
+			<desc>G  Global reference</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="82.08" cy="560.16" width="164.16" height="24.48"/>
+			<text x="82.08000" y="565.75999" class="st11" v:langID="2052" style="font-family:Arial;font-size:15.99996px;font-weight:normal" text-anchor="middle"><tspan x="82.08000" y="565.75999">G Global reference</tspan></text>		</g>
+		<g id="shape57-122" v:mID="57" v:groupContext="shape" transform="translate(288,-468.72)">
+			<title>Module_57</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape58-124" v:mID="58" v:groupContext="shape" transform="translate(299.52,-468.72)">
+			<title>Module_58</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape59-126" v:mID="59" v:groupContext="shape" transform="translate(311.04,-468.72)">
+			<title>Module_59</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape60-128" v:mID="60" v:groupContext="shape" transform="translate(322.56,-468.72)">
+			<title>Module_60</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape61-130" v:mID="61" v:groupContext="shape" transform="translate(334.08,-468.72)">
+			<title>Module_61</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape62-132" v:mID="62" v:groupContext="shape" transform="translate(345.6,-468.72)">
+			<title>Module_62</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape63-134" v:mID="63" v:groupContext="shape" transform="translate(357.12,-468.72)">
+			<title>Module_63</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape64-136" v:mID="64" v:groupContext="shape" transform="translate(288,-457.2)">
+			<title>Module_64</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape65-138" v:mID="65" v:groupContext="shape" transform="translate(299.52,-457.2)">
+			<title>Module_65</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape66-140" v:mID="66" v:groupContext="shape" transform="translate(311.04,-457.2)">
+			<title>Module_66</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape67-142" v:mID="67" v:groupContext="shape" transform="translate(322.56,-457.2)">
+			<title>Module_67</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape68-144" v:mID="68" v:groupContext="shape" transform="translate(334.08,-457.2)">
+			<title>Module_68</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape69-146" v:mID="69" v:groupContext="shape" transform="translate(345.6,-457.2)">
+			<title>Module_69</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape70-148" v:mID="70" v:groupContext="shape" transform="translate(357.12,-457.2)">
+			<title>Module_70</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape71-150" v:mID="71" v:groupContext="shape" transform="translate(288,-445.68)">
+			<title>Module_71</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape72-152" v:mID="72" v:groupContext="shape" transform="translate(299.52,-445.68)">
+			<title>Module_72</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape73-154" v:mID="73" v:groupContext="shape" transform="translate(311.04,-445.68)">
+			<title>Module_73</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape74-156" v:mID="74" v:groupContext="shape" transform="translate(322.56,-445.68)">
+			<title>Module_74</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape75-158" v:mID="75" v:groupContext="shape" transform="translate(334.08,-445.68)">
+			<title>Module_75</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape76-160" v:mID="76" v:groupContext="shape" transform="translate(345.6,-445.68)">
+			<title>Module_76</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape77-162" v:mID="77" v:groupContext="shape" transform="translate(357.12,-445.68)">
+			<title>Module_77</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape78-164" v:mID="78" v:groupContext="shape" transform="translate(288,-434.16)">
+			<title>Module_78</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape79-166" v:mID="79" v:groupContext="shape" transform="translate(299.52,-434.16)">
+			<title>Module_79</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape80-168" v:mID="80" v:groupContext="shape" transform="translate(311.04,-434.16)">
+			<title>Module_80</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape81-170" v:mID="81" v:groupContext="shape" transform="translate(322.56,-434.16)">
+			<title>Module_81</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape82-172" v:mID="82" v:groupContext="shape" transform="translate(334.08,-434.16)">
+			<title>Module_82</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape83-174" v:mID="83" v:groupContext="shape" transform="translate(345.6,-434.16)">
+			<title>Module_83</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape84-176" v:mID="84" v:groupContext="shape" transform="translate(357.12,-434.16)">
+			<title>Module_84</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape85-178" v:mID="85" v:groupContext="shape" transform="translate(288,-422.64)">
+			<title>Module_85</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape86-180" v:mID="86" v:groupContext="shape" transform="translate(299.52,-422.64)">
+			<title>Module_86</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape87-182" v:mID="87" v:groupContext="shape" transform="translate(311.04,-422.64)">
+			<title>Module_87</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape88-184" v:mID="88" v:groupContext="shape" transform="translate(322.56,-422.64)">
+			<title>Module_88</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape89-186" v:mID="89" v:groupContext="shape" transform="translate(334.08,-422.64)">
+			<title>Module_89</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape90-188" v:mID="90" v:groupContext="shape" transform="translate(345.6,-422.64)">
+			<title>Module_90</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape91-190" v:mID="91" v:groupContext="shape" transform="translate(357.12,-422.64)">
+			<title>Module_91</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape92-192" v:mID="92" v:groupContext="shape" transform="translate(288,-411.12)">
+			<title>Module_92</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape93-194" v:mID="93" v:groupContext="shape" transform="translate(299.52,-411.12)">
+			<title>Module_93</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape94-196" v:mID="94" v:groupContext="shape" transform="translate(311.04,-411.12)">
+			<title>Module_94</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape95-198" v:mID="95" v:groupContext="shape" transform="translate(322.56,-411.12)">
+			<title>Module_95</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape96-200" v:mID="96" v:groupContext="shape" transform="translate(334.08,-411.12)">
+			<title>Module_96</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape97-202" v:mID="97" v:groupContext="shape" transform="translate(345.6,-411.12)">
+			<title>Module_97</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape98-204" v:mID="98" v:groupContext="shape" transform="translate(357.12,-411.12)">
+			<title>Module_98</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape99-206" v:mID="99" v:groupContext="shape" transform="translate(288,-399.6)">
+			<title>Module_99</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape100-208" v:mID="100" v:groupContext="shape" transform="translate(299.52,-399.6)">
+			<title>Module_100</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape101-210" v:mID="101" v:groupContext="shape" transform="translate(311.04,-399.6)">
+			<title>Module_101</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape102-212" v:mID="102" v:groupContext="shape" transform="translate(322.56,-399.6)">
+			<title>Module_102</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape103-214" v:mID="103" v:groupContext="shape" transform="translate(334.08,-399.6)">
+			<title>Module_103</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape104-216" v:mID="104" v:groupContext="shape" transform="translate(345.6,-399.6)">
+			<title>Module_104</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape105-218" v:mID="105" v:groupContext="shape" transform="translate(357.12,-399.6)">
+			<title>Module_105</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape106-220" v:mID="106" v:groupContext="shape" transform="translate(282.96,-463.68)">
+			<title>Module_106</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape107-222" v:mID="107" v:groupContext="shape" transform="translate(294.48,-463.68)">
+			<title>Module_107</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape108-224" v:mID="108" v:groupContext="shape" transform="translate(306,-463.68)">
+			<title>Module_108</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape109-226" v:mID="109" v:groupContext="shape" transform="translate(317.52,-463.68)">
+			<title>Module_109</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape110-228" v:mID="110" v:groupContext="shape" transform="translate(329.04,-463.68)">
+			<title>Module_110</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape111-230" v:mID="111" v:groupContext="shape" transform="translate(340.56,-463.68)">
+			<title>Module_111</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape112-232" v:mID="112" v:groupContext="shape" transform="translate(352.08,-463.68)">
+			<title>Module_112</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape113-234" v:mID="113" v:groupContext="shape" transform="translate(282.96,-452.16)">
+			<title>Module_113</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape114-236" v:mID="114" v:groupContext="shape" transform="translate(294.48,-452.16)">
+			<title>Module_114</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape115-238" v:mID="115" v:groupContext="shape" transform="translate(306,-452.16)">
+			<title>Module_115</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape116-240" v:mID="116" v:groupContext="shape" transform="translate(317.52,-452.16)">
+			<title>Module_116</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape117-242" v:mID="117" v:groupContext="shape" transform="translate(329.04,-452.16)">
+			<title>Module_117</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape118-244" v:mID="118" v:groupContext="shape" transform="translate(340.56,-452.16)">
+			<title>Module_118</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape119-246" v:mID="119" v:groupContext="shape" transform="translate(352.08,-452.16)">
+			<title>Module_119</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape120-248" v:mID="120" v:groupContext="shape" transform="translate(282.96,-440.64)">
+			<title>Module_120</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape121-250" v:mID="121" v:groupContext="shape" transform="translate(294.48,-440.64)">
+			<title>Module_121</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape122-252" v:mID="122" v:groupContext="shape" transform="translate(306,-440.64)">
+			<title>Module_122</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape123-254" v:mID="123" v:groupContext="shape" transform="translate(317.52,-440.64)">
+			<title>Module_123</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape124-256" v:mID="124" v:groupContext="shape" transform="translate(329.04,-440.64)">
+			<title>Module_124</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape125-258" v:mID="125" v:groupContext="shape" transform="translate(340.56,-440.64)">
+			<title>Module_125</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape126-260" v:mID="126" v:groupContext="shape" transform="translate(352.08,-440.64)">
+			<title>Module_126</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape127-262" v:mID="127" v:groupContext="shape" transform="translate(282.96,-429.12)">
+			<title>Module_127</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape128-264" v:mID="128" v:groupContext="shape" transform="translate(294.48,-429.12)">
+			<title>Module_128</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape129-266" v:mID="129" v:groupContext="shape" transform="translate(306,-429.12)">
+			<title>Module_129</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape130-268" v:mID="130" v:groupContext="shape" transform="translate(317.52,-429.12)">
+			<title>Module_130</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape131-270" v:mID="131" v:groupContext="shape" transform="translate(329.04,-429.12)">
+			<title>Module_131</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape132-272" v:mID="132" v:groupContext="shape" transform="translate(340.56,-429.12)">
+			<title>Module_132</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape133-274" v:mID="133" v:groupContext="shape" transform="translate(352.08,-429.12)">
+			<title>Module_133</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape134-276" v:mID="134" v:groupContext="shape" transform="translate(282.96,-417.6)">
+			<title>Module_134</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape135-278" v:mID="135" v:groupContext="shape" transform="translate(294.48,-417.6)">
+			<title>Module_135</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape136-280" v:mID="136" v:groupContext="shape" transform="translate(306,-417.6)">
+			<title>Module_136</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape137-282" v:mID="137" v:groupContext="shape" transform="translate(317.52,-417.6)">
+			<title>Module_137</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape138-284" v:mID="138" v:groupContext="shape" transform="translate(329.04,-417.6)">
+			<title>Module_138</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape139-286" v:mID="139" v:groupContext="shape" transform="translate(340.56,-417.6)">
+			<title>Module_139</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape140-288" v:mID="140" v:groupContext="shape" transform="translate(352.08,-417.6)">
+			<title>Module_140</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape141-290" v:mID="141" v:groupContext="shape" transform="translate(282.96,-406.08)">
+			<title>Module_141</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape142-292" v:mID="142" v:groupContext="shape" transform="translate(294.48,-406.08)">
+			<title>Module_142</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape143-294" v:mID="143" v:groupContext="shape" transform="translate(306,-406.08)">
+			<title>Module_143</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape144-296" v:mID="144" v:groupContext="shape" transform="translate(317.52,-406.08)">
+			<title>Module_144</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape145-298" v:mID="145" v:groupContext="shape" transform="translate(329.04,-406.08)">
+			<title>Module_145</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape146-300" v:mID="146" v:groupContext="shape" transform="translate(340.56,-406.08)">
+			<title>Module_146</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape147-302" v:mID="147" v:groupContext="shape" transform="translate(352.08,-406.08)">
+			<title>Module_147</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape148-304" v:mID="148" v:groupContext="shape" transform="translate(282.96,-394.56)">
+			<title>Module_148</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape149-306" v:mID="149" v:groupContext="shape" transform="translate(294.48,-394.56)">
+			<title>Module_149</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape150-308" v:mID="150" v:groupContext="shape" transform="translate(306,-394.56)">
+			<title>Module_150</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape151-310" v:mID="151" v:groupContext="shape" transform="translate(317.52,-394.56)">
+			<title>Module_151</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape152-312" v:mID="152" v:groupContext="shape" transform="translate(329.04,-394.56)">
+			<title>Module_152</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape153-314" v:mID="153" v:groupContext="shape" transform="translate(340.56,-394.56)">
+			<title>Module_153</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape154-316" v:mID="154" v:groupContext="shape" transform="translate(352.08,-394.56)">
+			<title>Module_154</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape155-318" v:mID="155" v:groupContext="shape" transform="translate(277.92,-458.64)">
+			<title>Module_155</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape156-320" v:mID="156" v:groupContext="shape" transform="translate(289.44,-458.64)">
+			<title>Module_156</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape157-322" v:mID="157" v:groupContext="shape" transform="translate(300.96,-458.64)">
+			<title>Module_157</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape158-324" v:mID="158" v:groupContext="shape" transform="translate(312.48,-458.64)">
+			<title>Module_158</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape159-326" v:mID="159" v:groupContext="shape" transform="translate(324,-458.64)">
+			<title>Module_159</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape160-328" v:mID="160" v:groupContext="shape" transform="translate(335.52,-458.64)">
+			<title>Module_160</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape161-330" v:mID="161" v:groupContext="shape" transform="translate(347.04,-458.64)">
+			<title>Module_161</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape162-332" v:mID="162" v:groupContext="shape" transform="translate(277.92,-447.12)">
+			<title>Module_162</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape163-334" v:mID="163" v:groupContext="shape" transform="translate(289.44,-447.12)">
+			<title>Module_163</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape164-336" v:mID="164" v:groupContext="shape" transform="translate(300.96,-447.12)">
+			<title>Module_164</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape165-338" v:mID="165" v:groupContext="shape" transform="translate(312.48,-447.12)">
+			<title>Module_165</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape166-340" v:mID="166" v:groupContext="shape" transform="translate(324,-447.12)">
+			<title>Module_166</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape167-342" v:mID="167" v:groupContext="shape" transform="translate(335.52,-447.12)">
+			<title>Module_167</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape168-344" v:mID="168" v:groupContext="shape" transform="translate(347.04,-447.12)">
+			<title>Module_168</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape169-346" v:mID="169" v:groupContext="shape" transform="translate(277.92,-435.6)">
+			<title>Module_169</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape170-348" v:mID="170" v:groupContext="shape" transform="translate(289.44,-435.6)">
+			<title>Module_170</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape171-350" v:mID="171" v:groupContext="shape" transform="translate(300.96,-435.6)">
+			<title>Module_171</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape172-352" v:mID="172" v:groupContext="shape" transform="translate(312.48,-435.6)">
+			<title>Module_172</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape173-354" v:mID="173" v:groupContext="shape" transform="translate(324,-435.6)">
+			<title>Module_173</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape174-356" v:mID="174" v:groupContext="shape" transform="translate(335.52,-435.6)">
+			<title>Module_174</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape175-358" v:mID="175" v:groupContext="shape" transform="translate(347.04,-435.6)">
+			<title>Module_175</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape176-360" v:mID="176" v:groupContext="shape" transform="translate(277.92,-424.08)">
+			<title>Module_176</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape177-362" v:mID="177" v:groupContext="shape" transform="translate(289.44,-424.08)">
+			<title>Module_177</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape178-364" v:mID="178" v:groupContext="shape" transform="translate(300.96,-424.08)">
+			<title>Module_178</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape179-366" v:mID="179" v:groupContext="shape" transform="translate(312.48,-424.08)">
+			<title>Module_179</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape180-368" v:mID="180" v:groupContext="shape" transform="translate(324,-424.08)">
+			<title>Module_180</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape181-370" v:mID="181" v:groupContext="shape" transform="translate(335.52,-424.08)">
+			<title>Module_181</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape182-372" v:mID="182" v:groupContext="shape" transform="translate(347.04,-424.08)">
+			<title>Module_182</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape183-374" v:mID="183" v:groupContext="shape" transform="translate(277.92,-412.56)">
+			<title>Module_183</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape184-376" v:mID="184" v:groupContext="shape" transform="translate(289.44,-412.56)">
+			<title>Module_184</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape185-378" v:mID="185" v:groupContext="shape" transform="translate(300.96,-412.56)">
+			<title>Module_185</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape186-380" v:mID="186" v:groupContext="shape" transform="translate(312.48,-412.56)">
+			<title>Module_186</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape187-382" v:mID="187" v:groupContext="shape" transform="translate(324,-412.56)">
+			<title>Module_187</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape188-384" v:mID="188" v:groupContext="shape" transform="translate(335.52,-412.56)">
+			<title>Module_188</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape189-386" v:mID="189" v:groupContext="shape" transform="translate(347.04,-412.56)">
+			<title>Module_189</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape190-388" v:mID="190" v:groupContext="shape" transform="translate(277.92,-401.04)">
+			<title>Module_190</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape191-390" v:mID="191" v:groupContext="shape" transform="translate(289.44,-401.04)">
+			<title>Module_191</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape192-392" v:mID="192" v:groupContext="shape" transform="translate(300.96,-401.04)">
+			<title>Module_192</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape193-394" v:mID="193" v:groupContext="shape" transform="translate(312.48,-401.04)">
+			<title>Module_193</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape194-396" v:mID="194" v:groupContext="shape" transform="translate(324,-401.04)">
+			<title>Module_194</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape195-398" v:mID="195" v:groupContext="shape" transform="translate(335.52,-401.04)">
+			<title>Module_195</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape196-400" v:mID="196" v:groupContext="shape" transform="translate(347.04,-401.04)">
+			<title>Module_196</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape197-402" v:mID="197" v:groupContext="shape" transform="translate(277.92,-389.52)">
+			<title>Module_197</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape198-404" v:mID="198" v:groupContext="shape" transform="translate(289.44,-389.52)">
+			<title>Module_198</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape199-406" v:mID="199" v:groupContext="shape" transform="translate(300.96,-389.52)">
+			<title>Module_199</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape200-408" v:mID="200" v:groupContext="shape" transform="translate(312.48,-389.52)">
+			<title>Module_200</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape201-410" v:mID="201" v:groupContext="shape" transform="translate(324,-389.52)">
+			<title>Module_201</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape202-412" v:mID="202" v:groupContext="shape" transform="translate(335.52,-389.52)">
+			<title>Module_202</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape203-414" v:mID="203" v:groupContext="shape" transform="translate(347.04,-389.52)">
+			<title>Module_203</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape204-416" v:mID="204" v:groupContext="shape" transform="translate(243.36,-348.48)">
+			<title>Text_204</title>
+			<desc>Across images, sampled positions</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="90" cy="559.8" width="180" height="25.2"/>
+			<text x="90.00000" y="563.75496" class="st13" v:langID="2052" style="font-family:Arial;font-size:11.29988px;font-weight:normal" text-anchor="middle"><tspan x="90.00000" y="563.75496">Across images, sampled positions</tspan></text>		</g>
+		<g id="shape205-418" v:mID="205" v:groupContext="shape" transform="translate(452.88,-489.6)">
+			<title>Text_205</title>
+			<desc>S₀  Same-position reference</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="82.08" cy="560.16" width="164.16" height="24.48"/>
+			<text x="82.08000" y="564.44749" class="st11" v:langID="2052" style="font-family:Arial;font-size:12.24996px;font-weight:normal" text-anchor="middle"><tspan x="82.08000" y="564.44749">S₀ Same-position reference</tspan></text>		</g>
+		<g id="shape206-422" v:mID="206" v:groupContext="shape" transform="translate(487.44,-468.72)">
+			<title>Module_206</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape207-424" v:mID="207" v:groupContext="shape" transform="translate(498.96,-468.72)">
+			<title>Module_207</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape208-426" v:mID="208" v:groupContext="shape" transform="translate(510.48,-468.72)">
+			<title>Module_208</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape209-428" v:mID="209" v:groupContext="shape" transform="translate(522,-468.72)">
+			<title>Module_209</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape210-430" v:mID="210" v:groupContext="shape" transform="translate(533.52,-468.72)">
+			<title>Module_210</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape211-432" v:mID="211" v:groupContext="shape" transform="translate(545.04,-468.72)">
+			<title>Module_211</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape212-434" v:mID="212" v:groupContext="shape" transform="translate(556.56,-468.72)">
+			<title>Module_212</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape213-436" v:mID="213" v:groupContext="shape" transform="translate(487.44,-457.2)">
+			<title>Module_213</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape214-438" v:mID="214" v:groupContext="shape" transform="translate(498.96,-457.2)">
+			<title>Module_214</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape215-440" v:mID="215" v:groupContext="shape" transform="translate(510.48,-457.2)">
+			<title>Module_215</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape216-442" v:mID="216" v:groupContext="shape" transform="translate(522,-457.2)">
+			<title>Module_216</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape217-444" v:mID="217" v:groupContext="shape" transform="translate(533.52,-457.2)">
+			<title>Module_217</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape218-446" v:mID="218" v:groupContext="shape" transform="translate(545.04,-457.2)">
+			<title>Module_218</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape219-448" v:mID="219" v:groupContext="shape" transform="translate(556.56,-457.2)">
+			<title>Module_219</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape220-450" v:mID="220" v:groupContext="shape" transform="translate(487.44,-445.68)">
+			<title>Module_220</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape221-452" v:mID="221" v:groupContext="shape" transform="translate(498.96,-445.68)">
+			<title>Module_221</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape222-454" v:mID="222" v:groupContext="shape" transform="translate(510.48,-445.68)">
+			<title>Module_222</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape223-456" v:mID="223" v:groupContext="shape" transform="translate(522,-445.68)">
+			<title>Module_223</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape224-458" v:mID="224" v:groupContext="shape" transform="translate(533.52,-445.68)">
+			<title>Module_224</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape225-460" v:mID="225" v:groupContext="shape" transform="translate(545.04,-445.68)">
+			<title>Module_225</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape226-462" v:mID="226" v:groupContext="shape" transform="translate(556.56,-445.68)">
+			<title>Module_226</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape227-464" v:mID="227" v:groupContext="shape" transform="translate(487.44,-434.16)">
+			<title>Module_227</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape228-466" v:mID="228" v:groupContext="shape" transform="translate(498.96,-434.16)">
+			<title>Module_228</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape229-468" v:mID="229" v:groupContext="shape" transform="translate(510.48,-434.16)">
+			<title>Module_229</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape230-470" v:mID="230" v:groupContext="shape" transform="translate(522,-434.16)">
+			<title>Module_230</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape231-472" v:mID="231" v:groupContext="shape" transform="translate(533.52,-434.16)">
+			<title>Module_231</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape232-474" v:mID="232" v:groupContext="shape" transform="translate(545.04,-434.16)">
+			<title>Module_232</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape233-476" v:mID="233" v:groupContext="shape" transform="translate(556.56,-434.16)">
+			<title>Module_233</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape234-478" v:mID="234" v:groupContext="shape" transform="translate(487.44,-422.64)">
+			<title>Module_234</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape235-480" v:mID="235" v:groupContext="shape" transform="translate(498.96,-422.64)">
+			<title>Module_235</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape236-482" v:mID="236" v:groupContext="shape" transform="translate(510.48,-422.64)">
+			<title>Module_236</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape237-484" v:mID="237" v:groupContext="shape" transform="translate(522,-422.64)">
+			<title>Module_237</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape238-486" v:mID="238" v:groupContext="shape" transform="translate(533.52,-422.64)">
+			<title>Module_238</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape239-488" v:mID="239" v:groupContext="shape" transform="translate(545.04,-422.64)">
+			<title>Module_239</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape240-490" v:mID="240" v:groupContext="shape" transform="translate(556.56,-422.64)">
+			<title>Module_240</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape241-492" v:mID="241" v:groupContext="shape" transform="translate(487.44,-411.12)">
+			<title>Module_241</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape242-494" v:mID="242" v:groupContext="shape" transform="translate(498.96,-411.12)">
+			<title>Module_242</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape243-496" v:mID="243" v:groupContext="shape" transform="translate(510.48,-411.12)">
+			<title>Module_243</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape244-498" v:mID="244" v:groupContext="shape" transform="translate(522,-411.12)">
+			<title>Module_244</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape245-500" v:mID="245" v:groupContext="shape" transform="translate(533.52,-411.12)">
+			<title>Module_245</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape246-502" v:mID="246" v:groupContext="shape" transform="translate(545.04,-411.12)">
+			<title>Module_246</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape247-504" v:mID="247" v:groupContext="shape" transform="translate(556.56,-411.12)">
+			<title>Module_247</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape248-506" v:mID="248" v:groupContext="shape" transform="translate(487.44,-399.6)">
+			<title>Module_248</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape249-508" v:mID="249" v:groupContext="shape" transform="translate(498.96,-399.6)">
+			<title>Module_249</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape250-510" v:mID="250" v:groupContext="shape" transform="translate(510.48,-399.6)">
+			<title>Module_250</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape251-512" v:mID="251" v:groupContext="shape" transform="translate(522,-399.6)">
+			<title>Module_251</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape252-514" v:mID="252" v:groupContext="shape" transform="translate(533.52,-399.6)">
+			<title>Module_252</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape253-516" v:mID="253" v:groupContext="shape" transform="translate(545.04,-399.6)">
+			<title>Module_253</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape254-518" v:mID="254" v:groupContext="shape" transform="translate(556.56,-399.6)">
+			<title>Module_254</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape255-520" v:mID="255" v:groupContext="shape" transform="translate(482.4,-463.68)">
+			<title>Module_255</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape256-522" v:mID="256" v:groupContext="shape" transform="translate(493.92,-463.68)">
+			<title>Module_256</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape257-524" v:mID="257" v:groupContext="shape" transform="translate(505.44,-463.68)">
+			<title>Module_257</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape258-526" v:mID="258" v:groupContext="shape" transform="translate(516.96,-463.68)">
+			<title>Module_258</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape259-528" v:mID="259" v:groupContext="shape" transform="translate(528.48,-463.68)">
+			<title>Module_259</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape260-530" v:mID="260" v:groupContext="shape" transform="translate(540,-463.68)">
+			<title>Module_260</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape261-532" v:mID="261" v:groupContext="shape" transform="translate(551.52,-463.68)">
+			<title>Module_261</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape262-534" v:mID="262" v:groupContext="shape" transform="translate(482.4,-452.16)">
+			<title>Module_262</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape263-536" v:mID="263" v:groupContext="shape" transform="translate(493.92,-452.16)">
+			<title>Module_263</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape264-538" v:mID="264" v:groupContext="shape" transform="translate(505.44,-452.16)">
+			<title>Module_264</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape265-540" v:mID="265" v:groupContext="shape" transform="translate(516.96,-452.16)">
+			<title>Module_265</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape266-542" v:mID="266" v:groupContext="shape" transform="translate(528.48,-452.16)">
+			<title>Module_266</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape267-544" v:mID="267" v:groupContext="shape" transform="translate(540,-452.16)">
+			<title>Module_267</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape268-546" v:mID="268" v:groupContext="shape" transform="translate(551.52,-452.16)">
+			<title>Module_268</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape269-548" v:mID="269" v:groupContext="shape" transform="translate(482.4,-440.64)">
+			<title>Module_269</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape270-550" v:mID="270" v:groupContext="shape" transform="translate(493.92,-440.64)">
+			<title>Module_270</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape271-552" v:mID="271" v:groupContext="shape" transform="translate(505.44,-440.64)">
+			<title>Module_271</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape272-554" v:mID="272" v:groupContext="shape" transform="translate(516.96,-440.64)">
+			<title>Module_272</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape273-556" v:mID="273" v:groupContext="shape" transform="translate(528.48,-440.64)">
+			<title>Module_273</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape274-558" v:mID="274" v:groupContext="shape" transform="translate(540,-440.64)">
+			<title>Module_274</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape275-560" v:mID="275" v:groupContext="shape" transform="translate(551.52,-440.64)">
+			<title>Module_275</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape276-562" v:mID="276" v:groupContext="shape" transform="translate(482.4,-429.12)">
+			<title>Module_276</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape277-564" v:mID="277" v:groupContext="shape" transform="translate(493.92,-429.12)">
+			<title>Module_277</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape278-566" v:mID="278" v:groupContext="shape" transform="translate(505.44,-429.12)">
+			<title>Module_278</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape279-568" v:mID="279" v:groupContext="shape" transform="translate(516.96,-429.12)">
+			<title>Module_279</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape280-570" v:mID="280" v:groupContext="shape" transform="translate(528.48,-429.12)">
+			<title>Module_280</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape281-572" v:mID="281" v:groupContext="shape" transform="translate(540,-429.12)">
+			<title>Module_281</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape282-574" v:mID="282" v:groupContext="shape" transform="translate(551.52,-429.12)">
+			<title>Module_282</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape283-576" v:mID="283" v:groupContext="shape" transform="translate(482.4,-417.6)">
+			<title>Module_283</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape284-578" v:mID="284" v:groupContext="shape" transform="translate(493.92,-417.6)">
+			<title>Module_284</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape285-580" v:mID="285" v:groupContext="shape" transform="translate(505.44,-417.6)">
+			<title>Module_285</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape286-582" v:mID="286" v:groupContext="shape" transform="translate(516.96,-417.6)">
+			<title>Module_286</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape287-584" v:mID="287" v:groupContext="shape" transform="translate(528.48,-417.6)">
+			<title>Module_287</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape288-586" v:mID="288" v:groupContext="shape" transform="translate(540,-417.6)">
+			<title>Module_288</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape289-588" v:mID="289" v:groupContext="shape" transform="translate(551.52,-417.6)">
+			<title>Module_289</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape290-590" v:mID="290" v:groupContext="shape" transform="translate(482.4,-406.08)">
+			<title>Module_290</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape291-592" v:mID="291" v:groupContext="shape" transform="translate(493.92,-406.08)">
+			<title>Module_291</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape292-594" v:mID="292" v:groupContext="shape" transform="translate(505.44,-406.08)">
+			<title>Module_292</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape293-596" v:mID="293" v:groupContext="shape" transform="translate(516.96,-406.08)">
+			<title>Module_293</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape294-598" v:mID="294" v:groupContext="shape" transform="translate(528.48,-406.08)">
+			<title>Module_294</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape295-600" v:mID="295" v:groupContext="shape" transform="translate(540,-406.08)">
+			<title>Module_295</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape296-602" v:mID="296" v:groupContext="shape" transform="translate(551.52,-406.08)">
+			<title>Module_296</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape297-604" v:mID="297" v:groupContext="shape" transform="translate(482.4,-394.56)">
+			<title>Module_297</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape298-606" v:mID="298" v:groupContext="shape" transform="translate(493.92,-394.56)">
+			<title>Module_298</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape299-608" v:mID="299" v:groupContext="shape" transform="translate(505.44,-394.56)">
+			<title>Module_299</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape300-610" v:mID="300" v:groupContext="shape" transform="translate(516.96,-394.56)">
+			<title>Module_300</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape301-612" v:mID="301" v:groupContext="shape" transform="translate(528.48,-394.56)">
+			<title>Module_301</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape302-614" v:mID="302" v:groupContext="shape" transform="translate(540,-394.56)">
+			<title>Module_302</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape303-616" v:mID="303" v:groupContext="shape" transform="translate(551.52,-394.56)">
+			<title>Module_303</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape304-618" v:mID="304" v:groupContext="shape" transform="translate(477.36,-458.64)">
+			<title>Module_304</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape305-620" v:mID="305" v:groupContext="shape" transform="translate(488.88,-458.64)">
+			<title>Module_305</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape306-622" v:mID="306" v:groupContext="shape" transform="translate(500.4,-458.64)">
+			<title>Module_306</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape307-624" v:mID="307" v:groupContext="shape" transform="translate(511.92,-458.64)">
+			<title>Module_307</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape308-626" v:mID="308" v:groupContext="shape" transform="translate(523.44,-458.64)">
+			<title>Module_308</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape309-628" v:mID="309" v:groupContext="shape" transform="translate(534.96,-458.64)">
+			<title>Module_309</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape310-630" v:mID="310" v:groupContext="shape" transform="translate(546.48,-458.64)">
+			<title>Module_310</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape311-632" v:mID="311" v:groupContext="shape" transform="translate(477.36,-447.12)">
+			<title>Module_311</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape312-634" v:mID="312" v:groupContext="shape" transform="translate(488.88,-447.12)">
+			<title>Module_312</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape313-636" v:mID="313" v:groupContext="shape" transform="translate(500.4,-447.12)">
+			<title>Module_313</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape314-638" v:mID="314" v:groupContext="shape" transform="translate(511.92,-447.12)">
+			<title>Module_314</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape315-640" v:mID="315" v:groupContext="shape" transform="translate(523.44,-447.12)">
+			<title>Module_315</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape316-642" v:mID="316" v:groupContext="shape" transform="translate(534.96,-447.12)">
+			<title>Module_316</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape317-644" v:mID="317" v:groupContext="shape" transform="translate(546.48,-447.12)">
+			<title>Module_317</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape318-646" v:mID="318" v:groupContext="shape" transform="translate(477.36,-435.6)">
+			<title>Module_318</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape319-648" v:mID="319" v:groupContext="shape" transform="translate(488.88,-435.6)">
+			<title>Module_319</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape320-650" v:mID="320" v:groupContext="shape" transform="translate(500.4,-435.6)">
+			<title>Module_320</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape321-652" v:mID="321" v:groupContext="shape" transform="translate(511.92,-435.6)">
+			<title>Module_321</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape322-654" v:mID="322" v:groupContext="shape" transform="translate(523.44,-435.6)">
+			<title>Module_322</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape323-656" v:mID="323" v:groupContext="shape" transform="translate(534.96,-435.6)">
+			<title>Module_323</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape324-658" v:mID="324" v:groupContext="shape" transform="translate(546.48,-435.6)">
+			<title>Module_324</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape325-660" v:mID="325" v:groupContext="shape" transform="translate(477.36,-424.08)">
+			<title>Module_325</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape326-662" v:mID="326" v:groupContext="shape" transform="translate(488.88,-424.08)">
+			<title>Module_326</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape327-664" v:mID="327" v:groupContext="shape" transform="translate(500.4,-424.08)">
+			<title>Module_327</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape328-666" v:mID="328" v:groupContext="shape" transform="translate(511.92,-424.08)">
+			<title>Module_328</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape329-668" v:mID="329" v:groupContext="shape" transform="translate(523.44,-424.08)">
+			<title>Module_329</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape330-670" v:mID="330" v:groupContext="shape" transform="translate(534.96,-424.08)">
+			<title>Module_330</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape331-672" v:mID="331" v:groupContext="shape" transform="translate(546.48,-424.08)">
+			<title>Module_331</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape332-674" v:mID="332" v:groupContext="shape" transform="translate(477.36,-412.56)">
+			<title>Module_332</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape333-676" v:mID="333" v:groupContext="shape" transform="translate(488.88,-412.56)">
+			<title>Module_333</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape334-678" v:mID="334" v:groupContext="shape" transform="translate(500.4,-412.56)">
+			<title>Module_334</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape335-680" v:mID="335" v:groupContext="shape" transform="translate(511.92,-412.56)">
+			<title>Module_335</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape336-682" v:mID="336" v:groupContext="shape" transform="translate(523.44,-412.56)">
+			<title>Module_336</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape337-684" v:mID="337" v:groupContext="shape" transform="translate(534.96,-412.56)">
+			<title>Module_337</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape338-686" v:mID="338" v:groupContext="shape" transform="translate(546.48,-412.56)">
+			<title>Module_338</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape339-688" v:mID="339" v:groupContext="shape" transform="translate(477.36,-401.04)">
+			<title>Module_339</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape340-690" v:mID="340" v:groupContext="shape" transform="translate(488.88,-401.04)">
+			<title>Module_340</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape341-692" v:mID="341" v:groupContext="shape" transform="translate(500.4,-401.04)">
+			<title>Module_341</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape342-694" v:mID="342" v:groupContext="shape" transform="translate(511.92,-401.04)">
+			<title>Module_342</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape343-696" v:mID="343" v:groupContext="shape" transform="translate(523.44,-401.04)">
+			<title>Module_343</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape344-698" v:mID="344" v:groupContext="shape" transform="translate(534.96,-401.04)">
+			<title>Module_344</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape345-700" v:mID="345" v:groupContext="shape" transform="translate(546.48,-401.04)">
+			<title>Module_345</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape346-702" v:mID="346" v:groupContext="shape" transform="translate(477.36,-389.52)">
+			<title>Module_346</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape347-704" v:mID="347" v:groupContext="shape" transform="translate(488.88,-389.52)">
+			<title>Module_347</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape348-706" v:mID="348" v:groupContext="shape" transform="translate(500.4,-389.52)">
+			<title>Module_348</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape349-708" v:mID="349" v:groupContext="shape" transform="translate(511.92,-389.52)">
+			<title>Module_349</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape350-710" v:mID="350" v:groupContext="shape" transform="translate(523.44,-389.52)">
+			<title>Module_350</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape351-712" v:mID="351" v:groupContext="shape" transform="translate(534.96,-389.52)">
+			<title>Module_351</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape352-714" v:mID="352" v:groupContext="shape" transform="translate(546.48,-389.52)">
+			<title>Module_352</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape353-716" v:mID="353" v:groupContext="shape" transform="translate(442.8,-348.48)">
+			<title>Text_353</title>
+			<desc>Across images, corresponding position</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="90" cy="559.8" width="180" height="25.2"/>
+			<text x="90.00000" y="563.22996" class="st13" v:langID="2052" style="font-family:Arial;font-size:9.79988px;font-weight:normal" text-anchor="middle"><tspan x="90.00000" y="563.22996">Across images, corresponding position</tspan></text>		</g>
+		<g id="shape354-718" v:mID="354" v:groupContext="shape" transform="translate(652.32,-489.6)">
+			<title>Text_354</title>
+			<desc>S₁  Neighborhood reference</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="82.08" cy="560.16" width="164.16" height="24.48"/>
+			<text x="82.08000" y="564.44749" class="st11" v:langID="2052" style="font-family:Arial;font-size:12.24996px;font-weight:normal" text-anchor="middle"><tspan x="82.08000" y="564.44749">S₁ Neighborhood reference</tspan></text>		</g>
+		<g id="shape355-722" v:mID="355" v:groupContext="shape" transform="translate(686.88,-468.72)">
+			<title>Module_355</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape356-724" v:mID="356" v:groupContext="shape" transform="translate(698.4,-468.72)">
+			<title>Module_356</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape357-726" v:mID="357" v:groupContext="shape" transform="translate(709.92,-468.72)">
+			<title>Module_357</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape358-728" v:mID="358" v:groupContext="shape" transform="translate(721.44,-468.72)">
+			<title>Module_358</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape359-730" v:mID="359" v:groupContext="shape" transform="translate(732.96,-468.72)">
+			<title>Module_359</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape360-732" v:mID="360" v:groupContext="shape" transform="translate(744.48,-468.72)">
+			<title>Module_360</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape361-734" v:mID="361" v:groupContext="shape" transform="translate(756,-468.72)">
+			<title>Module_361</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape362-736" v:mID="362" v:groupContext="shape" transform="translate(686.88,-457.2)">
+			<title>Module_362</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape363-738" v:mID="363" v:groupContext="shape" transform="translate(698.4,-457.2)">
+			<title>Module_363</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape364-740" v:mID="364" v:groupContext="shape" transform="translate(709.92,-457.2)">
+			<title>Module_364</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape365-742" v:mID="365" v:groupContext="shape" transform="translate(721.44,-457.2)">
+			<title>Module_365</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape366-744" v:mID="366" v:groupContext="shape" transform="translate(732.96,-457.2)">
+			<title>Module_366</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape367-746" v:mID="367" v:groupContext="shape" transform="translate(744.48,-457.2)">
+			<title>Module_367</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape368-748" v:mID="368" v:groupContext="shape" transform="translate(756,-457.2)">
+			<title>Module_368</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape369-750" v:mID="369" v:groupContext="shape" transform="translate(686.88,-445.68)">
+			<title>Module_369</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape370-752" v:mID="370" v:groupContext="shape" transform="translate(698.4,-445.68)">
+			<title>Module_370</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape371-754" v:mID="371" v:groupContext="shape" transform="translate(709.92,-445.68)">
+			<title>Module_371</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape372-756" v:mID="372" v:groupContext="shape" transform="translate(721.44,-445.68)">
+			<title>Module_372</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape373-758" v:mID="373" v:groupContext="shape" transform="translate(732.96,-445.68)">
+			<title>Module_373</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape374-760" v:mID="374" v:groupContext="shape" transform="translate(744.48,-445.68)">
+			<title>Module_374</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape375-762" v:mID="375" v:groupContext="shape" transform="translate(756,-445.68)">
+			<title>Module_375</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape376-764" v:mID="376" v:groupContext="shape" transform="translate(686.88,-434.16)">
+			<title>Module_376</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape377-766" v:mID="377" v:groupContext="shape" transform="translate(698.4,-434.16)">
+			<title>Module_377</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape378-768" v:mID="378" v:groupContext="shape" transform="translate(709.92,-434.16)">
+			<title>Module_378</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape379-770" v:mID="379" v:groupContext="shape" transform="translate(721.44,-434.16)">
+			<title>Module_379</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape380-772" v:mID="380" v:groupContext="shape" transform="translate(732.96,-434.16)">
+			<title>Module_380</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape381-774" v:mID="381" v:groupContext="shape" transform="translate(744.48,-434.16)">
+			<title>Module_381</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape382-776" v:mID="382" v:groupContext="shape" transform="translate(756,-434.16)">
+			<title>Module_382</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape383-778" v:mID="383" v:groupContext="shape" transform="translate(686.88,-422.64)">
+			<title>Module_383</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape384-780" v:mID="384" v:groupContext="shape" transform="translate(698.4,-422.64)">
+			<title>Module_384</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape385-782" v:mID="385" v:groupContext="shape" transform="translate(709.92,-422.64)">
+			<title>Module_385</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape386-784" v:mID="386" v:groupContext="shape" transform="translate(721.44,-422.64)">
+			<title>Module_386</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape387-786" v:mID="387" v:groupContext="shape" transform="translate(732.96,-422.64)">
+			<title>Module_387</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape388-788" v:mID="388" v:groupContext="shape" transform="translate(744.48,-422.64)">
+			<title>Module_388</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape389-790" v:mID="389" v:groupContext="shape" transform="translate(756,-422.64)">
+			<title>Module_389</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape390-792" v:mID="390" v:groupContext="shape" transform="translate(686.88,-411.12)">
+			<title>Module_390</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape391-794" v:mID="391" v:groupContext="shape" transform="translate(698.4,-411.12)">
+			<title>Module_391</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape392-796" v:mID="392" v:groupContext="shape" transform="translate(709.92,-411.12)">
+			<title>Module_392</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape393-798" v:mID="393" v:groupContext="shape" transform="translate(721.44,-411.12)">
+			<title>Module_393</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape394-800" v:mID="394" v:groupContext="shape" transform="translate(732.96,-411.12)">
+			<title>Module_394</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape395-802" v:mID="395" v:groupContext="shape" transform="translate(744.48,-411.12)">
+			<title>Module_395</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape396-804" v:mID="396" v:groupContext="shape" transform="translate(756,-411.12)">
+			<title>Module_396</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape397-806" v:mID="397" v:groupContext="shape" transform="translate(686.88,-399.6)">
+			<title>Module_397</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape398-808" v:mID="398" v:groupContext="shape" transform="translate(698.4,-399.6)">
+			<title>Module_398</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape399-810" v:mID="399" v:groupContext="shape" transform="translate(709.92,-399.6)">
+			<title>Module_399</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape400-812" v:mID="400" v:groupContext="shape" transform="translate(721.44,-399.6)">
+			<title>Module_400</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape401-814" v:mID="401" v:groupContext="shape" transform="translate(732.96,-399.6)">
+			<title>Module_401</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape402-816" v:mID="402" v:groupContext="shape" transform="translate(744.48,-399.6)">
+			<title>Module_402</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape403-818" v:mID="403" v:groupContext="shape" transform="translate(756,-399.6)">
+			<title>Module_403</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape404-820" v:mID="404" v:groupContext="shape" transform="translate(681.84,-463.68)">
+			<title>Module_404</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape405-822" v:mID="405" v:groupContext="shape" transform="translate(693.36,-463.68)">
+			<title>Module_405</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape406-824" v:mID="406" v:groupContext="shape" transform="translate(704.88,-463.68)">
+			<title>Module_406</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape407-826" v:mID="407" v:groupContext="shape" transform="translate(716.4,-463.68)">
+			<title>Module_407</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape408-828" v:mID="408" v:groupContext="shape" transform="translate(727.92,-463.68)">
+			<title>Module_408</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape409-830" v:mID="409" v:groupContext="shape" transform="translate(739.44,-463.68)">
+			<title>Module_409</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape410-832" v:mID="410" v:groupContext="shape" transform="translate(750.96,-463.68)">
+			<title>Module_410</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape411-834" v:mID="411" v:groupContext="shape" transform="translate(681.84,-452.16)">
+			<title>Module_411</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape412-836" v:mID="412" v:groupContext="shape" transform="translate(693.36,-452.16)">
+			<title>Module_412</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape413-838" v:mID="413" v:groupContext="shape" transform="translate(704.88,-452.16)">
+			<title>Module_413</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape414-840" v:mID="414" v:groupContext="shape" transform="translate(716.4,-452.16)">
+			<title>Module_414</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape415-842" v:mID="415" v:groupContext="shape" transform="translate(727.92,-452.16)">
+			<title>Module_415</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape416-844" v:mID="416" v:groupContext="shape" transform="translate(739.44,-452.16)">
+			<title>Module_416</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape417-846" v:mID="417" v:groupContext="shape" transform="translate(750.96,-452.16)">
+			<title>Module_417</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape418-848" v:mID="418" v:groupContext="shape" transform="translate(681.84,-440.64)">
+			<title>Module_418</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape419-850" v:mID="419" v:groupContext="shape" transform="translate(693.36,-440.64)">
+			<title>Module_419</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape420-852" v:mID="420" v:groupContext="shape" transform="translate(704.88,-440.64)">
+			<title>Module_420</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape421-854" v:mID="421" v:groupContext="shape" transform="translate(716.4,-440.64)">
+			<title>Module_421</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape422-856" v:mID="422" v:groupContext="shape" transform="translate(727.92,-440.64)">
+			<title>Module_422</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape423-858" v:mID="423" v:groupContext="shape" transform="translate(739.44,-440.64)">
+			<title>Module_423</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape424-860" v:mID="424" v:groupContext="shape" transform="translate(750.96,-440.64)">
+			<title>Module_424</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape425-862" v:mID="425" v:groupContext="shape" transform="translate(681.84,-429.12)">
+			<title>Module_425</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape426-864" v:mID="426" v:groupContext="shape" transform="translate(693.36,-429.12)">
+			<title>Module_426</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape427-866" v:mID="427" v:groupContext="shape" transform="translate(704.88,-429.12)">
+			<title>Module_427</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape428-868" v:mID="428" v:groupContext="shape" transform="translate(716.4,-429.12)">
+			<title>Module_428</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape429-870" v:mID="429" v:groupContext="shape" transform="translate(727.92,-429.12)">
+			<title>Module_429</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape430-872" v:mID="430" v:groupContext="shape" transform="translate(739.44,-429.12)">
+			<title>Module_430</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape431-874" v:mID="431" v:groupContext="shape" transform="translate(750.96,-429.12)">
+			<title>Module_431</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape432-876" v:mID="432" v:groupContext="shape" transform="translate(681.84,-417.6)">
+			<title>Module_432</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape433-878" v:mID="433" v:groupContext="shape" transform="translate(693.36,-417.6)">
+			<title>Module_433</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape434-880" v:mID="434" v:groupContext="shape" transform="translate(704.88,-417.6)">
+			<title>Module_434</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape435-882" v:mID="435" v:groupContext="shape" transform="translate(716.4,-417.6)">
+			<title>Module_435</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape436-884" v:mID="436" v:groupContext="shape" transform="translate(727.92,-417.6)">
+			<title>Module_436</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape437-886" v:mID="437" v:groupContext="shape" transform="translate(739.44,-417.6)">
+			<title>Module_437</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape438-888" v:mID="438" v:groupContext="shape" transform="translate(750.96,-417.6)">
+			<title>Module_438</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape439-890" v:mID="439" v:groupContext="shape" transform="translate(681.84,-406.08)">
+			<title>Module_439</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape440-892" v:mID="440" v:groupContext="shape" transform="translate(693.36,-406.08)">
+			<title>Module_440</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape441-894" v:mID="441" v:groupContext="shape" transform="translate(704.88,-406.08)">
+			<title>Module_441</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape442-896" v:mID="442" v:groupContext="shape" transform="translate(716.4,-406.08)">
+			<title>Module_442</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape443-898" v:mID="443" v:groupContext="shape" transform="translate(727.92,-406.08)">
+			<title>Module_443</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape444-900" v:mID="444" v:groupContext="shape" transform="translate(739.44,-406.08)">
+			<title>Module_444</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape445-902" v:mID="445" v:groupContext="shape" transform="translate(750.96,-406.08)">
+			<title>Module_445</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape446-904" v:mID="446" v:groupContext="shape" transform="translate(681.84,-394.56)">
+			<title>Module_446</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape447-906" v:mID="447" v:groupContext="shape" transform="translate(693.36,-394.56)">
+			<title>Module_447</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape448-908" v:mID="448" v:groupContext="shape" transform="translate(704.88,-394.56)">
+			<title>Module_448</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape449-910" v:mID="449" v:groupContext="shape" transform="translate(716.4,-394.56)">
+			<title>Module_449</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape450-912" v:mID="450" v:groupContext="shape" transform="translate(727.92,-394.56)">
+			<title>Module_450</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape451-914" v:mID="451" v:groupContext="shape" transform="translate(739.44,-394.56)">
+			<title>Module_451</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape452-916" v:mID="452" v:groupContext="shape" transform="translate(750.96,-394.56)">
+			<title>Module_452</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape453-918" v:mID="453" v:groupContext="shape" transform="translate(676.8,-458.64)">
+			<title>Module_453</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape454-920" v:mID="454" v:groupContext="shape" transform="translate(688.32,-458.64)">
+			<title>Module_454</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape455-922" v:mID="455" v:groupContext="shape" transform="translate(699.84,-458.64)">
+			<title>Module_455</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape456-924" v:mID="456" v:groupContext="shape" transform="translate(711.36,-458.64)">
+			<title>Module_456</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape457-926" v:mID="457" v:groupContext="shape" transform="translate(722.88,-458.64)">
+			<title>Module_457</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape458-928" v:mID="458" v:groupContext="shape" transform="translate(734.4,-458.64)">
+			<title>Module_458</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape459-930" v:mID="459" v:groupContext="shape" transform="translate(745.92,-458.64)">
+			<title>Module_459</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape460-932" v:mID="460" v:groupContext="shape" transform="translate(676.8,-447.12)">
+			<title>Module_460</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape461-934" v:mID="461" v:groupContext="shape" transform="translate(688.32,-447.12)">
+			<title>Module_461</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape462-936" v:mID="462" v:groupContext="shape" transform="translate(699.84,-447.12)">
+			<title>Module_462</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape463-938" v:mID="463" v:groupContext="shape" transform="translate(711.36,-447.12)">
+			<title>Module_463</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape464-940" v:mID="464" v:groupContext="shape" transform="translate(722.88,-447.12)">
+			<title>Module_464</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape465-942" v:mID="465" v:groupContext="shape" transform="translate(734.4,-447.12)">
+			<title>Module_465</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape466-944" v:mID="466" v:groupContext="shape" transform="translate(745.92,-447.12)">
+			<title>Module_466</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape467-946" v:mID="467" v:groupContext="shape" transform="translate(676.8,-435.6)">
+			<title>Module_467</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape468-948" v:mID="468" v:groupContext="shape" transform="translate(688.32,-435.6)">
+			<title>Module_468</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape469-950" v:mID="469" v:groupContext="shape" transform="translate(699.84,-435.6)">
+			<title>Module_469</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape470-952" v:mID="470" v:groupContext="shape" transform="translate(711.36,-435.6)">
+			<title>Module_470</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape471-954" v:mID="471" v:groupContext="shape" transform="translate(722.88,-435.6)">
+			<title>Module_471</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape472-956" v:mID="472" v:groupContext="shape" transform="translate(734.4,-435.6)">
+			<title>Module_472</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape473-958" v:mID="473" v:groupContext="shape" transform="translate(745.92,-435.6)">
+			<title>Module_473</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape474-960" v:mID="474" v:groupContext="shape" transform="translate(676.8,-424.08)">
+			<title>Module_474</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape475-962" v:mID="475" v:groupContext="shape" transform="translate(688.32,-424.08)">
+			<title>Module_475</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape476-964" v:mID="476" v:groupContext="shape" transform="translate(699.84,-424.08)">
+			<title>Module_476</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape477-966" v:mID="477" v:groupContext="shape" transform="translate(711.36,-424.08)">
+			<title>Module_477</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape478-968" v:mID="478" v:groupContext="shape" transform="translate(722.88,-424.08)">
+			<title>Module_478</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape479-970" v:mID="479" v:groupContext="shape" transform="translate(734.4,-424.08)">
+			<title>Module_479</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape480-972" v:mID="480" v:groupContext="shape" transform="translate(745.92,-424.08)">
+			<title>Module_480</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape481-974" v:mID="481" v:groupContext="shape" transform="translate(676.8,-412.56)">
+			<title>Module_481</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape482-976" v:mID="482" v:groupContext="shape" transform="translate(688.32,-412.56)">
+			<title>Module_482</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape483-978" v:mID="483" v:groupContext="shape" transform="translate(699.84,-412.56)">
+			<title>Module_483</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape484-980" v:mID="484" v:groupContext="shape" transform="translate(711.36,-412.56)">
+			<title>Module_484</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape485-982" v:mID="485" v:groupContext="shape" transform="translate(722.88,-412.56)">
+			<title>Module_485</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st12"/>
+		</g>
+		<g id="shape486-984" v:mID="486" v:groupContext="shape" transform="translate(734.4,-412.56)">
+			<title>Module_486</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape487-986" v:mID="487" v:groupContext="shape" transform="translate(745.92,-412.56)">
+			<title>Module_487</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape488-988" v:mID="488" v:groupContext="shape" transform="translate(676.8,-401.04)">
+			<title>Module_488</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape489-990" v:mID="489" v:groupContext="shape" transform="translate(688.32,-401.04)">
+			<title>Module_489</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape490-992" v:mID="490" v:groupContext="shape" transform="translate(699.84,-401.04)">
+			<title>Module_490</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape491-994" v:mID="491" v:groupContext="shape" transform="translate(711.36,-401.04)">
+			<title>Module_491</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape492-996" v:mID="492" v:groupContext="shape" transform="translate(722.88,-401.04)">
+			<title>Module_492</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape493-998" v:mID="493" v:groupContext="shape" transform="translate(734.4,-401.04)">
+			<title>Module_493</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape494-1000" v:mID="494" v:groupContext="shape" transform="translate(745.92,-401.04)">
+			<title>Module_494</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape495-1002" v:mID="495" v:groupContext="shape" transform="translate(676.8,-389.52)">
+			<title>Module_495</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape496-1004" v:mID="496" v:groupContext="shape" transform="translate(688.32,-389.52)">
+			<title>Module_496</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape497-1006" v:mID="497" v:groupContext="shape" transform="translate(699.84,-389.52)">
+			<title>Module_497</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape498-1008" v:mID="498" v:groupContext="shape" transform="translate(711.36,-389.52)">
+			<title>Module_498</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape499-1010" v:mID="499" v:groupContext="shape" transform="translate(722.88,-389.52)">
+			<title>Module_499</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape500-1012" v:mID="500" v:groupContext="shape" transform="translate(734.4,-389.52)">
+			<title>Module_500</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape501-1014" v:mID="501" v:groupContext="shape" transform="translate(745.92,-389.52)">
+			<title>Module_501</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st15"/>
+		</g>
+		<g id="shape502-1016" v:mID="502" v:groupContext="shape" transform="translate(642.24,-348.48)">
+			<title>Text_502</title>
+			<desc>Across images, valid 3×3 neighborhood</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="90" cy="559.8" width="180" height="25.2"/>
+			<text x="90.00000" y="557.84002" class="st13" v:langID="2052" style="font-family:Arial;font-size:9.79988px;font-weight:normal" text-anchor="middle"><tspan x="90.00000" y="557.84002">Across images, valid 3×3</tspan><tspan x="90.00000" y="568.61989">neighborhood</tspan></text>		</g>
+		<g id="shape503-1020" v:mID="503" v:groupContext="shape" transform="translate(36,-326.88)">
+			<title>Module_503</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st16"/>
+		</g>
+		<g id="shape504-1022" v:mID="504" v:groupContext="shape" transform="translate(54,-321.84)">
+			<title>Text_504</title>
+			<desc>Query location</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="90" cy="560.88" width="180" height="23.04"/>
+			<text x="3.96000" y="565.25497" class="st17" v:langID="2052" style="font-family:Arial;font-size:12.49992px;font-weight:normal" text-anchor="start"><tspan x="3.96000" y="565.25497">Query location</tspan></text>		</g>
+		<g id="shape505-1024" v:mID="505" v:groupContext="shape" transform="translate(256.32,-326.88)">
+			<title>Module_505</title>
+			<rect x="0" y="560.88" width="11.52" height="11.52" class="st18"/>
+		</g>
+		<g id="shape506-1026" v:mID="506" v:groupContext="shape" transform="translate(274.32,-321.84)">
+			<title>Text_506</title>
+			<desc>Normal retrieval candidates</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="140.4" cy="560.88" width="280.8" height="23.04"/>
+			<text x="3.96000" y="565.25497" class="st17" v:langID="2052" style="font-family:Arial;font-size:12.49992px;font-weight:normal" text-anchor="start"><tspan x="3.96000" y="565.25497">Normal retrieval candidates</tspan></text>		</g>
+		<g id="shape507-1028" v:mID="507" v:groupContext="shape" transform="translate(540,-321.84)">
+			<title>Text_507</title>
+			<desc>Stacked grids: normal reference images</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="151.2" cy="560.88" width="302.41" height="23.04"/>
+			<text x="151.20000" y="565.25497" class="st17" v:langID="2052" style="font-family:Arial;font-size:12.49992px;font-weight:normal" text-anchor="middle"><tspan x="151.20000" y="565.25497">Stacked grids: normal reference images</tspan></text>		</g>
+		<g id="shape508-1030" v:mID="508" v:groupContext="shape" transform="translate(14.4,-303.839)">
+			<title>Connector_508</title>
+			<path d="M0 572.4 L835.2 572.4" class="st10"/>
+		</g>
+		<g id="shape509-1033" v:mID="509" v:groupContext="shape" transform="translate(12.96,-263.52)">
+			<title>Text_509</title>
+			<desc>(b) Calibration using normal response distributions</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="417.6" cy="559.8" width="835.2" height="25.2"/>
+			<text x="3.96000" y="566.10000" class="st1" v:langID="2052" style="font-family:Arial;font-size:18.00000px;font-weight:bold" text-anchor="start"><tspan x="3.96000" y="566.10000">(b) Calibration using normal response distributions</tspan></text>		</g>
+		<g id="shape510-1036" v:mID="510" v:groupContext="shape" transform="translate(49.68,-237.6)">
+			<title>Text_510</title>
+			<desc>Normal calibration responses: cable</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="212.4" cy="562.68" width="424.8" height="19.44"/>
+			<text x="212.40000" y="567.40500" class="st19" v:langID="2052" style="font-family:Arial;font-size:13.50000px;font-weight:normal" text-anchor="middle"><tspan x="212.40000" y="567.40500">Normal calibration responses: cable</tspan></text>		</g>
+		<g id="shape511-1039" v:mID="511" v:groupContext="shape" transform="translate(60.48,-77.04)">
+			<title>Module_511</title>
+			<rect x="0" y="419.04" width="342.34" height="153.36" class="st20"/>
+		</g>
+		<g id="shape512-1041" v:mID="512" v:groupContext="shape" transform="translate(402.82,-77.04)">
+			<title>Module_512</title>
+			<rect x="0" y="419.04" width="55.8196" height="153.36" class="st21"/>
+		</g>
+		<g id="shape513-1043" v:mID="513" v:groupContext="shape" transform="translate(60.48,-77.04)">
+			<title>Connector_513</title>
+			<path d="M0 419.04 L0 572.4 L398.16 572.4" class="st22"/>
+		</g>
+		<g id="shape514-1046" v:mID="514" v:groupContext="shape" transform="translate(60.48,-73.08)">
+			<title>Connector_514</title>
+			<path d="M0 568.44 L0 572.4" class="st23"/>
+		</g>
+		<g id="shape515-1049" v:mID="515" v:groupContext="shape" transform="translate(38.88,-54.72)">
+			<title>Text_515</title>
+			<desc>0.00</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.6" cy="563.76" width="43.2" height="17.28"/>
+			<text x="14.91" y="567.26" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>0.00</text>		</g>
+		<g id="shape516-1051" v:mID="516" v:groupContext="shape" transform="translate(193.2,-73.08)">
+			<title>Connector_516</title>
+			<path d="M0 568.44 L0 572.4" class="st23"/>
+		</g>
+		<g id="shape517-1054" v:mID="517" v:groupContext="shape" transform="translate(170.079,-54.72)">
+			<title>Text_517</title>
+			<desc>0.05</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.6" cy="563.76" width="43.2" height="17.28"/>
+			<text x="14.91" y="567.26" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>0.05</text>		</g>
+		<g id="shape518-1056" v:mID="518" v:groupContext="shape" transform="translate(325.92,-73.08)">
+			<title>Connector_518</title>
+			<path d="M0 568.44 L0 572.4" class="st23"/>
+		</g>
+		<g id="shape519-1059" v:mID="519" v:groupContext="shape" transform="translate(297.638,-54.72)">
+			<title>Text_519</title>
+			<desc>0.10</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.6" cy="563.76" width="43.2" height="17.28"/>
+			<text x="14.91" y="567.26" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>0.10</text>		</g>
+		<g id="shape520-1061" v:mID="520" v:groupContext="shape" transform="translate(458.64,-73.08)">
+			<title>Connector_520</title>
+			<path d="M0 568.44 L0 572.4" class="st23"/>
+		</g>
+		<g id="shape521-1064" v:mID="521" v:groupContext="shape" transform="translate(431.943,-54.72)">
+			<title>Text_521</title>
+			<desc>0.15</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.6" cy="563.76" width="43.2" height="17.28"/>
+			<text x="14.91" y="567.26" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>0.15</text>		</g>
+		<g id="shape522-1066" v:mID="522" v:groupContext="shape" transform="translate(56.52,-77.0393)">
+			<title>Connector_522</title>
+			<path d="M0 572.4 L3.96 572.4" class="st23"/>
+		</g>
+		<g id="shape523-1069" v:mID="523" v:groupContext="shape" transform="translate(20.16,-67.32)">
+			<title>Text_523</title>
+			<desc>0</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="15.84" cy="562.68" width="31.68" height="19.44"/>
+			<text x="20.77" y="566.18" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>0</text>		</g>
+		<g id="shape524-1071" v:mID="524" v:groupContext="shape" transform="translate(56.52,-126.114)">
+			<title>Connector_524</title>
+			<path d="M0 572.4 L3.96 572.4" class="st23"/>
+		</g>
+		<g id="shape525-1074" v:mID="525" v:groupContext="shape" transform="translate(20.16,-116.395)">
+			<title>Text_525</title>
+			<desc>4</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="15.84" cy="562.68" width="31.68" height="19.44"/>
+			<text x="20.77" y="566.18" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>4</text>		</g>
+		<g id="shape526-1076" v:mID="526" v:groupContext="shape" transform="translate(56.52,-175.19)">
+			<title>Connector_526</title>
+			<path d="M0 572.4 L3.96 572.4" class="st23"/>
+		</g>
+		<g id="shape527-1079" v:mID="527" v:groupContext="shape" transform="translate(20.16,-165.47)">
+			<title>Text_527</title>
+			<desc>8</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="15.84" cy="562.68" width="31.68" height="19.44"/>
+			<text x="20.77" y="566.18" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>8</text>		</g>
+		<g id="shape528-1081" v:mID="528" v:groupContext="shape" transform="translate(56.52,-224.265)">
+			<title>Connector_528</title>
+			<path d="M0 572.4 L3.96 572.4" class="st23"/>
+		</g>
+		<g id="shape529-1084" v:mID="529" v:groupContext="shape" transform="translate(20.16,-214.546)">
+			<title>Text_529</title>
+			<desc>12</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="15.84" cy="562.68" width="31.68" height="19.44"/>
+			<text x="13.82" y="566.18" class="st24" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="2"/><v:tabList/>12</text>		</g>
+		<g id="shape530-1086" v:mID="530" v:groupContext="shape" transform="translate(11.952,-230.49)">
+			<title>Text_530</title>
+			<desc>Calibrated score E</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="40.245" cy="563.49" width="80.5" height="17.82"/>
+			<text x="40.24500" y="566.74500" class="st25" v:langID="2052" style="font-family:Arial;font-size:9.30000px;font-weight:normal" text-anchor="middle"><tspan x="40.24500" y="566.74500">Calibrated score E</tspan></text>		</g>
+		<g id="shape531-1090" v:mID="531" v:groupContext="shape" transform="translate(90.426,-227.322)">
+			<title>Text_531</title>
+			<desc>C</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="4.43894" cy="563.49" width="8.88" height="17.82"/>
+			<text x="1.01" y="566.15" class="st26" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="1"/><v:tabList/>C</text>		</g>
+		<g id="shape532-1092" v:mID="532" v:groupContext="shape" transform="translate(97.2879,-230.49)">
+			<title>Text_532</title>
+			<desc>(a)</desc>
+			<v:textBlock v:margins="rect(0,0,0,0)" v:tabSpace="42.5197"/>
+			<v:textRect cx="9.0732" cy="563.49" width="18.15" height="17.82"/>
+			<text x="1.01" y="567.19" class="st27" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="1"/><v:tabList/>(a)</text>		</g>
+		<g id="shape533-1094" v:mID="533" v:groupContext="shape" transform="translate(142.56,-30.96)">
+			<title>Text_533</title>
+			<desc>Raw convolutional response a</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="116.28" cy="561.96" width="232.56" height="20.88"/>
+			<text x="116.28000" y="566.93003" class="st28" v:langID="2052" style="font-family:Arial;font-size:14.20008px;font-weight:normal" text-anchor="middle"><tspan x="116.28000" y="566.93003">Raw convolutional response a</tspan></text>		</g>
+		<g id="shape534-1098" v:mID="534" v:groupContext="shape" transform="translate(60.48,-77.04)">
+			<title>Connector_534</title>
+			<path d="M0 572.4 L40.46 572.4 L60.42 572.34 L72.9 572 L84.02 571.24 L95.05 570.08 L106.54 568.35 L115.19 566.54 L123.93        563.92 L132.63 560.5 L154.96 549.58 L172.77 542.12 L181.69 538.02 L190.76 532.91 L195.41 529.68 L203.62        522.74 L211.86 514.58 L214.38 511.68 L217.58 508.82 L218.51 507.6 L221.07 505.59 L222.53 504.88 L223.96        503.43 L224.88 502.96 L225.88 501.71 L230.6 498.31 L231.78 496.86 L233.95 495.02 L237.36 493.03 L239.88        491 L243.92 488.96 L244.39 488.23 L245.18 487.89 L245.78 487.18 L248.01 486.42 L250.74 486.03 L251.9 485.19        L255.09 483.83 L256.42 483.71 L257.98 482.56 L257.98 482.29 L260.52 481.45 L265.04 480.69 L266.69 480.06        L270.49 479.89 L270.98 479.56 L272.26 479.38 L275.7 479.21 L278.41 478.3 L283.45 477.72 L286.07 476.69 L297.91        475.33 L298.69 474.58 L299.62 474.32 L299.85 473.79 L301.34 473.23 L302.61 472.03 L303.11 471.05 L306.15        470.71 L309.21 469.98 L309.47 469.61 L311.02 469.22 L313.8 468.82 L314.2 468.4 L317.1 467.97 L317.33 467.52        L318.85 467.06 L320.15 466.08 L320.59 465.01 L324.08 463.84 L324.81 463.21 L327.57 462.55 L328.56 461.85        L328.7 461.1 L330.79 460.31 L331.03 457.57 L331.77 456.51 L333.97 455.34 L334.29 450.96 L336.9 449.07 L338.83        446.83 L339.5 444.09 L341.32 440.57 L342.34 435.59" class="st29"/>
+		</g>
+		<g id="shape535-1101" v:mID="535" v:groupContext="shape" transform="translate(402.82,-213.849)">
+			<title>Connector_535</title>
+			<path d="M0 572.4 L45.28 563.47" class="st30"/>
+		</g>
+		<g id="shape536-1104" v:mID="536" v:groupContext="shape" transform="translate(402.82,-77.04)">
+			<title>Connector_536</title>
+			<path d="M0 419.04 L0 572.4" class="st31"/>
+		</g>
+		<g id="shape537-1107" v:mID="537" v:groupContext="shape" transform="translate(184.464,-77.04)">
+			<title>Connector_537</title>
+			<path d="M0 572.4 L0 563.9" class="st32"/>
+		</g>
+		<g id="shape538-1110" v:mID="538" v:groupContext="shape" transform="translate(181.8,-82.8799)">
+			<title>Marker_538</title>
+			<path d="M5.33 569.74 L5.28 569.22 L5.13 568.72 L4.88 568.26 L4.55 567.85 L4.14 567.52 L3.68 567.27 L3.18 567.12 L2.66        567.07 L2.14 567.12 L1.64 567.27 L1.18 567.52 L0.78 567.85 L0.45 568.26 L0.2 568.72 L0.05 569.22 L0 569.74        L0.05 570.26 L0.2 570.76 L0.45 571.22 L0.78 571.62 L1.18 571.95 L1.64 572.2 L2.14 572.35 L2.66 572.4 L3.18        572.35 L3.68 572.2 L4.14 571.95 L4.55 571.62 L4.88 571.22 L5.13 570.76 L5.28 570.26 L5.33 569.74 Z" class="st33"/>
+		</g>
+		<g id="shape539-1112" v:mID="539" v:groupContext="shape" transform="translate(149.184,-93.4639)">
+			<title>Text_539</title>
+			<desc>q₅₀</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="17.64" cy="561.96" width="35.28" height="20.88"/>
+			<text x="8.39" y="565.75" class="st19" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="1"/><v:tabList/>q<tspan class="st14" style="font-weight:normal">₅₀</tspan></text>		</g>
+		<g id="shape540-1115" v:mID="540" v:groupContext="shape" transform="translate(246.667,-77.04)">
+			<title>Connector_540</title>
+			<path d="M0 572.4 L0 535.65" class="st32"/>
+		</g>
+		<g id="shape541-1118" v:mID="541" v:groupContext="shape" transform="translate(244.003,-111.127)">
+			<title>Marker_541</title>
+			<path d="M5.33 569.74 L5.28 569.22 L5.13 568.72 L4.88 568.26 L4.55 567.85 L4.14 567.52 L3.68 567.27 L3.18 567.12 L2.66        567.07 L2.14 567.12 L1.64 567.27 L1.18 567.52 L0.78 567.85 L0.45 568.26 L0.2 568.72 L0.05 569.22 L0 569.74        L0.05 570.26 L0.2 570.76 L0.45 571.22 L0.78 571.62 L1.18 571.95 L1.64 572.2 L2.14 572.35 L2.66 572.4 L3.18        572.35 L3.68 572.2 L4.14 571.95 L4.55 571.62 L4.88 571.22 L5.13 570.76 L5.28 570.26 L5.33 569.74 Z" class="st33"/>
+		</g>
+		<g id="shape542-1120" v:mID="542" v:groupContext="shape" transform="translate(251.707,-96.5107)">
+			<title>Text_542</title>
+			<desc>q₉₅</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="17.64" cy="561.96" width="35.28" height="20.88"/>
+			<text x="8.39" y="565.75" class="st19" v:langID="2052" style="font-weight:normal"><v:paragraph v:spLine="-1.12" v:horizAlign="1"/><v:tabList/>q<tspan class="st14" style="font-weight:normal">₉₅</tspan></text>		</g>
+		<g id="shape543-1123" v:mID="543" v:groupContext="shape" transform="translate(80.64,-210.959)">
+			<title>Connector_543</title>
+			<path d="M0 572.4 L35.28 572.4" class="st29"/>
+		</g>
+		<g id="shape544-1126" v:mID="544" v:groupContext="shape" transform="translate(121.68,-200.88)">
+			<title>Text_544</title>
+			<desc>Empirical mapping</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="71.28" cy="561.96" width="142.56" height="20.88"/>
+			<text x="3.96000" y="566.51003" class="st34" v:langID="2052" style="font-family:Arial;font-size:13.00008px;font-weight:normal" text-anchor="start"><tspan x="3.96000" y="566.51003">Empirical mapping</tspan></text>		</g>
+		<g id="shape545-1128" v:mID="545" v:groupContext="shape" transform="translate(80.64,-183.599)">
+			<title>Connector_545</title>
+			<path d="M0 572.4 L35.28 572.4" class="st30"/>
+		</g>
+		<g id="shape546-1131" v:mID="546" v:groupContext="shape" transform="translate(121.68,-173.52)">
+			<title>Text_546</title>
+			<desc>Linear extrapolation</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="71.28" cy="561.96" width="142.56" height="20.88"/>
+			<text x="3.96000" y="566.51003" class="st34" v:langID="2052" style="font-family:Arial;font-size:13.00008px;font-weight:normal" text-anchor="start"><tspan x="3.96000" y="566.51003">Linear extrapolation</tspan></text>		</g>
+		<g id="shape547-1133" v:mID="547" v:groupContext="shape" transform="translate(536.4,-187.2)">
+			<title>Module_547</title>
+			<desc>Normal calibration response distribution</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="145.8" cy="552.96" width="291.6" height="38.88"/>
+			<rect x="0" y="533.52" width="291.6" height="38.88" class="st35"/>
+			<text x="145.80000" y="558.03503" class="st36" v:langID="2052" style="font-family:Arial;font-size:14.50008px;font-weight:normal" text-anchor="middle"><tspan x="145.80000" y="558.03503">Normal calibration response distribution</tspan></text>		</g>
+		<g id="shape548-1136" v:mID="548" v:groupContext="shape" transform="translate(536.4,-107.28)">
+			<title>Module_548</title>
+			<desc>Proportion of normal responses reaching or exceeding a</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="145.8" cy="547.56" width="291.6" height="49.68"/>
+			<rect x="0" y="522.72" width="291.6" height="49.68" class="st35"/>
+			<text x="145.80000" y="544.65998" class="st36" v:langID="2052" style="font-family:Arial;font-size:14.50008px;font-weight:normal" text-anchor="middle"><tspan x="145.80000" y="544.65998">Proportion of normal responses</tspan><tspan x="145.80000" y="560.61007">reaching or exceeding a</tspan></text>		</g>
+		<g id="shape549-1142" v:mID="549" v:groupContext="shape" transform="translate(536.4,-38.16)">
+			<title>Module_549</title>
+			<desc>Smoothing and negative logarithm → score</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="145.8" cy="552.96" width="291.6" height="38.88"/>
+			<rect x="0" y="533.52" width="291.6" height="38.88" class="st35"/>
+			<text x="145.80000" y="558.03503" class="st36" v:langID="2052" style="font-family:Arial;font-size:14.50008px;font-weight:normal" text-anchor="middle"><tspan x="145.80000" y="558.03503">Smoothing and negative logarithm → score</tspan></text>		</g>
+		<g id="shape550-1147" v:mID="550" v:groupContext="shape" transform="translate(682.2,-159.12)">
+			<title>Connector_550</title>
+			<path d="M0 544.32 L0 566.9" class="st38"/>
+		</g>
+		<g id="shape551-1153" v:mID="551" v:groupContext="shape" transform="translate(682.2,-79.2)">
+			<title>Connector_551</title>
+			<path d="M0 544.32 L0 566.9" class="st38"/>
+		</g>
+		<g id="shape552-1158" v:mID="552" v:groupContext="shape" transform="translate(532.8,-237.6)">
+			<title>Text_552</title>
+			<desc>Less frequent in normal samples → higher score</desc>
+			<v:textBlock v:margins="rect(1.8,3.96,1.8,3.96)" v:tabSpace="42.5197"/>
+			<v:textRect cx="151.2" cy="561.96" width="302.41" height="20.88"/>
+			<text x="151.20000" y="566.58004" class="st25" v:langID="2052" style="font-family:Arial;font-size:13.20012px;font-weight:normal" text-anchor="middle"><tspan x="151.20000" y="566.58004">Less frequent in normal samples → higher score</tspan></text>		</g>
+	</g>
+</svg>
