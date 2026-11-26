@@ -1,0 +1,6102 @@
+{
+  "schema": "adnvc_public_training_profiles_v1",
+  "seeds": [
+    3407,
+    3408,
+    3409
+  ],
+  "scientific_status": "Fresh source-based retraining; not a bit-exact claim for historical checkpoints.",
+  "protocol": {
+    "pseudo_score_gain": 1.75,
+    "clean_subtraction_alpha": 0.8,
+    "target_dilate_kernel": 1,
+    "visual_strength": 2.0,
+    "grad_clip_norm": 1000000000000.0,
+    "dice_input": "exp_probability",
+    "normal_loss_scope": "mean_clean_pseudo",
+    "checkpoint_selection": "minimum_training_loss_only",
+    "pseudo_rng": "seed + epoch * 1000003 + batch_index * 10007",
+    "teacher_student_initialization": "same fixed ImageNet ResNet18 pretrained parameters"
+  },
+  "datasets": {
+    "mvtec": {
+      "bottle": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "bottle",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 209
+      },
+      "cable": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "cable",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.42,
+            "layer2": 0.42,
+            "layer3": 0.16
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.48,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.045,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.35,
+          "pseudo_score_weight": 0.48,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 224
+      },
+      "capsule": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "capsule",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 219
+      },
+      "carpet": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "carpet",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.4,
+            "layer2": 0.42,
+            "layer3": 0.18
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.43,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0015,
+          "max_area_ratio": 0.055,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.35,
+          "pseudo_score_weight": 0.46,
+          "positive_temperature": 8.0,
+          "margin": 0.48,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 280
+      },
+      "grid": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "grid",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.4,
+            "layer2": 0.42,
+            "layer3": 0.18
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.43,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0015,
+          "max_area_ratio": 0.055,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.35,
+          "pseudo_score_weight": 0.46,
+          "positive_temperature": 8.0,
+          "margin": 0.48,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 264
+      },
+      "hazelnut": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "hazelnut",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 391
+      },
+      "leather": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "leather",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.4,
+            "layer2": 0.42,
+            "layer3": 0.18
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.43,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0015,
+          "max_area_ratio": 0.055,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.35,
+          "pseudo_score_weight": 0.46,
+          "positive_temperature": 8.0,
+          "margin": 0.48,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 245
+      },
+      "metal_nut": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "metal_nut",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 220
+      },
+      "pill": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "pill",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 267
+      },
+      "screw": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "screw",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 320
+      },
+      "tile": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "tile",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.4,
+            "layer2": 0.42,
+            "layer3": 0.18
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.43,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0015,
+          "max_area_ratio": 0.055,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.35,
+          "pseudo_score_weight": 0.46,
+          "positive_temperature": 8.0,
+          "margin": 0.48,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 230
+      },
+      "toothbrush": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "toothbrush",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 60
+      },
+      "transistor": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "transistor",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.46,
+            "layer2": 0.4,
+            "layer3": 0.14
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 2048,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.5,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0012,
+          "max_area_ratio": 0.05,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.08,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.45,
+          "pseudo_score_weight": 0.5,
+          "positive_temperature": 8.0,
+          "margin": 0.5,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 213
+      },
+      "wood": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "wood",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.4,
+            "layer2": 0.42,
+            "layer3": 0.18
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.43,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.0015,
+          "max_area_ratio": 0.055,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.35,
+          "pseudo_score_weight": 0.46,
+          "positive_temperature": 8.0,
+          "margin": 0.48,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 247
+      },
+      "zipper": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "mvtec",
+          "category": "zipper",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.28,
+            "layer2": 0.42,
+            "layer3": 0.3
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 240
+      }
+    },
+    "visa": {
+      "candle": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "candle",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 900
+      },
+      "capsules": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "capsules",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 542
+      },
+      "cashew": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "cashew",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 450
+      },
+      "chewinggum": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "chewinggum",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 453
+      },
+      "fryum": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "fryum",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 450
+      },
+      "macaroni1": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "macaroni1",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 900
+      },
+      "macaroni2": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "macaroni2",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 900
+      },
+      "pcb1": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "pcb1",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 904
+      },
+      "pcb2": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "pcb2",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 901
+      },
+      "pcb3": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "pcb3",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 905
+      },
+      "pcb4": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "pcb4",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 904
+      },
+      "pipe_fryum": {
+        "schema_version": 1,
+        "dataset": {
+          "name": "visa",
+          "category": "pipe_fryum",
+          "image_size": 512,
+          "include_abnormal_in_train": false
+        },
+        "model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 1536,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.45,
+          "temperature": 0.07,
+          "allow_random_fallback": false
+        },
+        "train": {
+          "epochs": 60,
+          "batch_size": 6,
+          "num_workers": 0,
+          "lr": 0.0001,
+          "weight_decay": 0.0001,
+          "seed": 3407,
+          "rebuild_bank_before_training": true,
+          "update_bank_during_training": false,
+          "save_last": true
+        },
+        "pseudo": {
+          "enabled": true,
+          "enable_prob": 0.98,
+          "min_area_ratio": 0.002,
+          "max_area_ratio": 0.085,
+          "modes": [
+            "blob",
+            "scratch",
+            "thin_scratch",
+            "line_gap",
+            "texture_noise",
+            "copy_paste",
+            "erase",
+            "color_shift",
+            "micro_dot",
+            "edge_ring",
+            "thin_arc",
+            "local_blur",
+            "low_contrast"
+          ],
+          "normal_align_weight": 1.0,
+          "normal_score_weight": 0.1,
+          "pseudo_bce_weight": 1.0,
+          "pseudo_dice_weight": 1.25,
+          "pseudo_score_weight": 0.42,
+          "positive_temperature": 8.0,
+          "margin": 0.46,
+          "category_modes": {
+            "cable": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "color_shift",
+              "copy_paste",
+              "erase",
+              "low_contrast"
+            ],
+            "zipper": [
+              "thin_scratch",
+              "line_gap",
+              "thin_arc",
+              "micro_dot",
+              "copy_paste",
+              "erase"
+            ],
+            "carpet": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "grid": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "leather": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "tile": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "wood": [
+              "thin_scratch",
+              "texture_noise",
+              "low_contrast",
+              "local_blur",
+              "color_shift",
+              "micro_dot"
+            ],
+            "screw": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "transistor": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "toothbrush": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "capsule": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "metal_nut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "hazelnut": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ],
+            "pill": [
+              "thin_scratch",
+              "micro_dot",
+              "edge_ring",
+              "thin_arc",
+              "line_gap",
+              "low_contrast",
+              "local_blur",
+              "color_shift"
+            ]
+          }
+        },
+        "evaluation_model": {
+          "in_channels": 3,
+          "image_size": 512,
+          "backbone": "resnet18",
+          "pretrained": true,
+          "layers": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "layer_weights": {
+            "layer1": 0.32,
+            "layer2": 0.43,
+            "layer3": 0.25
+          },
+          "prototype_size": 24576,
+          "max_bank_update_per_image": 512,
+          "score_disc_weight": 1.0,
+          "score_proto_weight": 0.35,
+          "temperature": 0.07,
+          "allow_random_fallback": false,
+          "nearest_topk": 1,
+          "score_grad_weight": 0.0,
+          "balanced_bank": 24576
+        },
+        "normal_count": 450
+      }
+    }
+  }
+}

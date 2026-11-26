@@ -1,0 +1,7 @@
+# Prepared official VisA1cls layout, or supply --layout raw --split-file ... .
+dataset: visa
+category: all
+seed: 3407
+data_root: data/VisA_pytorch/1cls
+output: outputs/training
+# All category-specific numerical parameters live in training_profiles.json.

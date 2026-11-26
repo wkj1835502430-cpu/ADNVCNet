@@ -1,0 +1,7 @@
+# Paths are user-controlled; run commands from the repository root.
+dataset: mvtec
+category: all
+seed: 3407
+data_root: data/mvtec_anomaly_detection
+output: outputs/training
+# All category-specific numerical parameters live in training_profiles.json.
