@@ -149,4 +149,4 @@ docs/        Training recipe
 
 Run the CPU tests with `python -m unittest discover -s tests -v`. External models and datasets retain their original terms; see [third-party notices](../THIRD_PARTY_NOTICES.md).
 
-Repository: https://github.com/wkj1835502430-cpu/ADNVCNet
+Repository: https://github.com/wkj-research/ADNVCNet
